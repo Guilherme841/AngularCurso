@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightslategray;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .containerRows {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .rows {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+  }
+}
