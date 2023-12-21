@@ -70,8 +70,8 @@ const user = {
 // Optional chaining tal?.tal?.tal
 
 const usuario = {
-  nickname: "flavinho",
-  username: "do pneu",
+  nickname: "ciclano",
+  username: "ciclaneide",
   token: {
     pass: 1111111,
     id: "admin",

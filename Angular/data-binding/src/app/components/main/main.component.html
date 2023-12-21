@@ -1,1 +1,75 @@
-<p>main works!</p>
+<main>
+  <article>
+    <h1>INTERPOLAÇÂO</h1>
+    <p>Soma com interpolação: {{ 3.5 + 3.5 }}</p>
+    <p>Soma com função interpolada: {{ 1 + 1 + getValor() }}</p>
+    <p>Fazer pedido: {{ order && getOrder() }}</p>
+    <!-- Se order for true chama a função -->
+  </article>
+  <article>
+    <h1>Property binding</h1>
+    <p>
+      Img usando interpolação:
+      <img src="{{ urlImage }}" alt="Imagem retratando paisagem nevosa" />
+    </p>
+    <p>
+      Img usando property binding === [ propriedade do elemento ]:
+      <img [src]="urlImage" alt="Imagem retratando paisagem nevosa" />
+      <!-- Mesmo que bind-src="" -->
+    </p>
+  </article>
+  <article>
+    <h1>Class e Style binding</h1>
+    <div>
+      Selecione uma classe:
+      <!-- Variavel local e event binding -->
+      <select #class (change)="(0)">
+        <option value="alert-primary">Primeiro Alerta</option>
+        <option value="alert-secondary">Segundo Alerta</option>
+        <option value="alert-success">Alerta de Sucesso</option>
+        <option value="alert-danger">Alerta de Perigo</option>
+      </select>
+      <!-- Setando classe com interpolação -->
+      <div class="alert {{class.value}}" role="alert">
+        Texto colorido conforme o combobox
+      </div>
+      <!-- Property binding pra adicionar classe conforme o valor na variavel local -->
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-primary]="class.value == 'alert-primary'"
+      >
+        A simple primary alert—check it out!
+      </div>
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-secondary]="class.value == 'alert-secondary'"
+      >
+        A simple secondary alert—check it out!
+      </div>
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-success]="class.value == 'alert-success'"
+      >
+        A simple success alert—check it out!
+      </div>
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-danger]="class.value == 'alert-danger'"
+      >
+        A simple danger alert—check it out!
+      </div>
+      <!-- Style binding -->
+      <div
+        class="alert alert-danger"
+        role="alert"
+        [style.display]="class.value == 'alert-danger' ? 'block' : 'none'"
+      >
+        Style binding
+      </div>
+    </div>
+  </article>
+</main>

@@ -1,0 +1,7 @@
+article {
+  border-bottom: 3px solid gray;
+}
+p {
+  font-size: 1.5em;
+  border-bottom: 1px dashed gray;
+}
