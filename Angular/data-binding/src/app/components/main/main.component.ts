@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
@@ -15,6 +16,7 @@ export class MainComponent {
   keyBoardValue: string = '';
   savedValue: string = '';
   isMouseOver: boolean = false;
+  nome: string = 'Ciclano';
 
   getOrder() {
     return true;
