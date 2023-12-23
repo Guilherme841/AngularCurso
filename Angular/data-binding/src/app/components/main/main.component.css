@@ -5,3 +5,9 @@ p {
   font-size: 1.5em;
   border-bottom: 1px dashed gray;
 }
+
+.hover {
+  background-color: lightblue;
+  font-weight: bold;
+  cursor: pointer;
+}
