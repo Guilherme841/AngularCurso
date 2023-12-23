@@ -30,7 +30,7 @@
         <option value="alert-danger">Alerta de Perigo</option>
       </select>
       <!-- Setando classe com interpolação -->
-      <div class="alert {{class.value}}" role="alert">
+      <div class="alert {{ class.value }}" role="alert">
         Texto colorido conforme o combobox
       </div>
       <!-- Property binding pra adicionar classe conforme o valor na variavel local -->
@@ -55,21 +55,21 @@
       >
         A simple success alert—check it out!
       </div>
-      <div
-        class="alert"
-        role="alert"
-        [class.alert-danger]="class.value == 'alert-danger'"
-      >
-        A simple danger alert—check it out!
+      <div class="alert" role="alert" [class.alert-danger]="class.value == 'alert-danger'">
+        A simple denger alert—check it out!
       </div>
       <!-- Style binding -->
-      <div
-        class="alert alert-danger"
-        role="alert"
-        [style.display]="class.value == 'alert-danger' ? 'block' : 'none'"
-      >
-        Style binding
+      <div class="alert" role="alert" [class.alert-danger]="class.value == 'alert-danger'" [style.display]="class.value == 'alert-danger' ? 'block' : 'none'">
+        PERIGO!
       </div>
     </div>
+  </article>
+  <article class="eventBinding">
+    <h3>Event Binding</h3>
+    <div>
+      <button class="btn btn-primary" (click)="alert()">Me clique!</button>
+    </div>
+    <input type="text" value="" (keyup)="onKeyUp($event)">
+    <p>Valor da key = {{keyBoardValue}}</p>
   </article>
 </main>
