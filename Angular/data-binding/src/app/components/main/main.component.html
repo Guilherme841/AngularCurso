@@ -117,8 +117,12 @@
       <input
       type="text"
       [(ngModel)]="nome"
-    />  <!-- [(ngModel)] bind de propriedade e evento ,forma simplificada do ngModel e ngModelChange juntos -->
+    />  <!-- [(ngModel)] bind de propriedade e evento ,forma simplificada do ngModel e ngModelChange juntos
+              bindon-ngModel é o mesmo -->
     <p>Você digitou o nome: {{ nome }}</p>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="pessoa.nome">
     </div>
   </article>
 </main>

@@ -18,6 +18,14 @@ export class MainComponent {
   isMouseOver: boolean = false;
   nome: string = 'Ciclano';
 
+  pessoa: any = {
+    nome: 'fulano',
+    idade: 20,
+    adress: {
+      street: 'street'
+    }
+  }
+
   getOrder() {
     return true;
   }
