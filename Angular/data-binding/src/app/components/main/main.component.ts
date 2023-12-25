@@ -1,30 +1,21 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MyFormComponent } from '../my-form/my-form.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, MyFormComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
 export class MainComponent {
-
   urlImage: any =
     'https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI';
   order: boolean = true;
   keyBoardValue: string = '';
   savedValue: string = '';
   isMouseOver: boolean = false;
-  nome: string = 'Ciclano';
-
-  pessoa: any = {
-    nome: 'fulano',
-    idade: 20,
-    adress: {
-      street: 'street'
-    }
-  }
 
   getOrder() {
     return true;
@@ -36,7 +27,8 @@ export class MainComponent {
   alert() {
     alert('Ok');
   }
-  onKeyUp(event: KeyboardEvent) { // Posso tipar a variavel pra usar Intelligence .Tal
+  onKeyUp(event: KeyboardEvent) {
+    // Posso tipar a variavel pra usar Intelligence .Tal
     this.keyBoardValue += event.key; // isso é o mesmo que o de baixo
     // this.keyBoardValue = ((<HTMLInputElement>event.target).value);
   }

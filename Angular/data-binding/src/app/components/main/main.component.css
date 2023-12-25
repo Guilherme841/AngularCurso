@@ -1,7 +1,8 @@
 article {
   border-bottom: 3px solid gray;
 }
-p ,span{
+p,
+span {
   font-size: 1.5em;
   border-bottom: 1px dashed gray;
 }
