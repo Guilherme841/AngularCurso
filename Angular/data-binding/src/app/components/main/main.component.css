@@ -1,12 +1,11 @@
-article {
-  border-bottom: 3px solid gray;
+.interpolacao {
+  border-top: 3px solid gray;
 }
 p,
 span {
   font-size: 1.5em;
   border-bottom: 1px dashed gray;
 }
-
 .hover {
   background-color: lightblue;
   font-weight: bold;

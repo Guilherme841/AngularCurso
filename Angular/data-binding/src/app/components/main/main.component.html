@@ -1,13 +1,19 @@
-<main>
-  <article>
-    <h1>INTERPOLAÇÂO</h1>
+<main (click)="openArticle($event)">
+  <article class="interpolacao article-aula">
+    <div class="container-tittle">
+      <h1>INTERPOLAÇÂO</h1>
+      <button type="button" class="btn btn-secondary btn-sm button">more</button>
+    </div>
     <p>Soma com interpolação: {{ 3.5 + 3.5 }}</p>
     <p>Soma com função interpolada: {{ 1 + 1 + getValor() }}</p>
     <p>Fazer pedido: {{ order && getOrder() }}</p>
     <!-- Se order for true chama a função -->
   </article>
-  <article>
-    <h1>Property binding</h1>
+  <article class="property-bind article-aula">
+    <div class="container-tittle">
+      <h1>Property binding</h1>
+      <button type="button" class="btn btn-secondary btn-sm button">more</button>
+    </div>
     <p>
       Img usando interpolação:
       <img src="{{ urlImage }}" alt="Imagem retratando paisagem nevosa" />
@@ -18,8 +24,11 @@
       <!-- Mesmo que bind-src="" -->
     </p>
   </article>
-  <article>
-    <h1>Class e Style binding</h1>
+  <article class="style-binding article-aula">
+    <div class="container-tittle">
+      <h1>Class e Style binding</h1>
+      <button type="button" class="btn btn-secondary btn-sm button">more</button>
+    </div>
     <div>
       Selecione uma classe:
       <!-- Variavel local e event binding -->
@@ -73,8 +82,11 @@
       </div>
     </div>
   </article>
-  <article class="eventBinding">
-    <h3>Event Binding</h3>
+  <article class="eventBinding article-aula">
+    <div class="container-tittle">
+      <h1>Event Binding</h1>
+      <button type="button" class="btn btn-secondary btn-sm button">more</button>
+    </div>
     <div>
       <button class="btn btn-primary" (click)="alert()">Me clique!</button>
     </div>
@@ -96,4 +108,13 @@
     >
   </article>
   <app-my-form></app-my-form>
+  <article class="input-output-properties article-aula">
+    <div class="container-tittle">
+      <h1>Input/Output-Properties</h1>
+      <button type="button" class="btn btn-secondary btn-sm button">more</button>
+    </div>
+    <div>
+      <app-input-property [valorString]="valorString"></app-input-property>
+    </div>
+  </article>
 </main>

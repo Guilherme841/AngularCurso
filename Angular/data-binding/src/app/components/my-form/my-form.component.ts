@@ -6,11 +6,10 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './my-form.component.html',
-  styleUrl: './my-form.component.css',
+  styleUrl: './my-form.component.css'
 })
 export class MyFormComponent {
   nome: string = 'Ciclano';
-
   pessoa: any = {
     nome: 'fulano',
     idade: 20,
