@@ -52,6 +52,7 @@ export class MainComponent {
   }
   articleOpen: boolean = false;
   openArticle(event: Event) {
+    // console.log(event) 
     let button = event.target as HTMLElement;
     if (button.classList.contains('button')) {
       let article = button.closest('.article-aula');
