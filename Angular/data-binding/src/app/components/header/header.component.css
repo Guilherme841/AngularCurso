@@ -2,6 +2,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 24px;
+  background-color: lightgray;
 }
 
 header > h1 {
