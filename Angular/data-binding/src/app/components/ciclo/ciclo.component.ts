@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ciclo',
@@ -7,9 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './ciclo.component.html',
   styleUrl: './ciclo.component.css',
 })
-export class CicloComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {
-    console.log(this.ngOnInit)
-  }
+export class CicloComponent  {
+
 }

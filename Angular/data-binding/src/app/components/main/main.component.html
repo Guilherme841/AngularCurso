@@ -170,6 +170,10 @@
       </button>
     </div>
     <div>
+      <button class="btn btn-primary" (click)="showedCycle = !showedCycle">Carregar componente com métodos de cycles</button>
+      @if (showedCycle == true) {
+        <app-cycle-metodo></app-cycle-metodo>
+      }
       <app-ciclo></app-ciclo>
     </div>
   </article>

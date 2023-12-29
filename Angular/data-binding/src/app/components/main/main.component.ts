@@ -5,6 +5,7 @@ import { MyFormComponent } from '../my-form/my-form.component';
 import { InputPropertyComponent } from '../input-property/input-property.component';
 import { OutputPropertyComponent } from '../output-property/output-property.component';
 import { CicloComponent } from '../ciclo/ciclo.component';
+import { CycleMetodoComponent } from '../ciclo/cycle-metodo/cycle-metodo.component';
 
 @Component({
   selector: 'app-main',
@@ -15,6 +16,7 @@ import { CicloComponent } from '../ciclo/ciclo.component';
     InputPropertyComponent,
     OutputPropertyComponent,
     CicloComponent,
+    CycleMetodoComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
@@ -25,7 +27,7 @@ export class MainComponent {
   order: boolean = true;
   valorString: string = 'EMPTY';
   valor: number = 5;
-
+  showedCycle: boolean = false;
   getOrder() {
     return true;
   }
