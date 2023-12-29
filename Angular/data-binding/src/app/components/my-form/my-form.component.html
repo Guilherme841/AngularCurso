@@ -3,6 +3,7 @@
     <h1>Two way data binding</h1>
     <button type="button" class="btn btn-secondary btn-sm button">more</button>
   </div>
+  <p>Two way data binding é : [ngModel] e (ngModelChange) de <mark>forma simplificada</mark>, que resulta em <mark>[(ngModel)]</mark>, o event<mark>(ngModelChange)</mark> chama/executa algo ou função sempre que o valor <mark>é alterado</mark>, $event retorna o valor a ser passado. <mark>[ngModel]</mark> é usado em <mark>elementos de formulários</mark>"input", "select" e " textarea"..., ele <mark>se refere ao valor</mark> que será adicionado atraves talvez de um variavel, <mark>vinculando os dados em tempo real</mark> na variavel e exibi. <mark>[(ngModel)]</mark> é um Binding de value e event de atualização <mark>juntos</mark>, já recebe o valor e <mark>atualiza no mesmo</mark>, pode ser passado um <mark>objeto</mark>.</p>
   <div>
     <!-- Primeiro exemplo  -->
     <input
@@ -13,21 +14,16 @@
     />
     <p>Você digitou o nome: {{ nome }}</p>
     <!-- Segundo exemplo -->
-    <input
-      type="text"
-      [ngModel]="nome"
-      (ngModelChange)="nome = $event"
-    /> <!-- ngModel representa uma entidade / e o ngModelChange é pra quando essa entidade for atualizada -->
+    <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
+    <!-- ngModel representa uma entidade / e o ngModelChange é pra quando essa entidade for atualizada -->
     <p>Você digitou o nome: {{ nome }}</p>
     <!-- Terceiro exemplo(MAIS SIMPLIFICADO) com two-way-data-binding -->
-    <input
-    type="text"
-    [(ngModel)]="nome"
-  />  <!-- [(ngModel)] bind de propriedade e evento ,forma simplificada do ngModel e ngModelChange juntos
+    <input type="text" [(ngModel)]="nome" />
+    <!-- [(ngModel)] bind de propriedade e evento ,forma simplificada do ngModel e ngModelChange juntos
             bindon-ngModel é o mesmo -->
-  <p>Você digitou o nome: {{ nome }}</p>
+    <p>Você digitou o nome: {{ nome }}</p>
   </div>
   <div>
-    <input type="text" [(ngModel)]="pessoa.nome">
+    <input type="text" [(ngModel)]="pessoa.nome" />
   </div>
 </article>
