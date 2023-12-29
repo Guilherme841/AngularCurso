@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MyFormComponent } from '../my-form/my-form.component';
 import { InputPropertyComponent } from '../input-property/input-property.component';
 import { OutputPropertyComponent } from '../output-property/output-property.component';
+import { CicloComponent } from '../ciclo/ciclo.component';
 
 @Component({
   selector: 'app-main',
@@ -13,6 +14,7 @@ import { OutputPropertyComponent } from '../output-property/output-property.comp
     MyFormComponent,
     InputPropertyComponent,
     OutputPropertyComponent,
+    CicloComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
@@ -52,7 +54,7 @@ export class MainComponent {
   }
   articleOpen: boolean = false;
   openArticle(event: Event) {
-    // console.log(event) 
+    // console.log(event)
     let button = event.target as HTMLElement;
     if (button.classList.contains('button')) {
       let article = button.closest('.article-aula');
