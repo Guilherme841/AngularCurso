@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { MyFormComponent } from '../my-form/my-form.component';
@@ -19,12 +19,10 @@ import { CicloComponent } from '../ciclo/ciclo.component';
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
-
 export class MainComponent {
   urlImage: any =
     'https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI';
   order: boolean = true;
-
   valorString: string = 'EMPTY';
   valor: number = 5;
 
