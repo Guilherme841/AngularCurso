@@ -1,13 +1,6 @@
 .interpolacao {
   border-top: 3px solid gray;
 }
-
-p,
-span {
-  font-size: 1.5em;
-  border-bottom: 1px dashed gray;
-  text-align: justify;
-}
 .hover {
   background-color: lightblue;
   font-weight: bold;

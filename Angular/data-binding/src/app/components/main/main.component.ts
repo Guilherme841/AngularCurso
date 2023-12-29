@@ -19,6 +19,7 @@ import { CicloComponent } from '../ciclo/ciclo.component';
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
+
 export class MainComponent {
   urlImage: any =
     'https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI';
