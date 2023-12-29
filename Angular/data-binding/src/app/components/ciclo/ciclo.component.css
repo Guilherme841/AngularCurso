@@ -1,3 +1,6 @@
 ul {
   list-style: decimal;
 }
+li {
+  border-bottom: 1px solid gray;
+}
