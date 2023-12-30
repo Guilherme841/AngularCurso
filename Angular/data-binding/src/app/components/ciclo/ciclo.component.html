@@ -1,16 +1,27 @@
 <p>
-  Documentação do Angular sobre lifeCycles:
   <a href="https://angular.io/guide/lifecycle-hooks" target="_blank"
     >LifeCycles</a
   >
 </p>
 <p>
-  LifeCycle é um estágio do componente desde sua criação até sua destruição,
-  existem métodos que serão executados conforme o estágio que o componente se
-  encontra, posso tipar esses métodos com "void" para não retornar valor.
+  LifeCycle é um <mark>estágio do componente</mark> desde sua criação até sua
+  destruição, existem métodos que serão executados
+  <mark>conforme o estágio</mark> que o componente se encontra, posso tipar
+  esses métodos com "void" para <mark>não retornar</mark> valor.
 </p>
 <ul>
-  <li>ngOnInit() - é uma função que será executada sempre que o componente é inicializado/exibido no template, geralmente usado para fazer a chamada do servidor para obter dados e mostrar no template.</li>
-  <li>onChange() - é uma função que será executada sempre que algum dado de uma propriedade vinculado ao componente for alterada, geralmente usada com inputs porperties.</li>
-  <li>onDestroy() - é uma função que será executada antes do componente ser destruido, geralmente usado para limpeza.</li>
+  <li>
+    ngOnInit() - é uma função que será executada sempre que o componente é
+    <mark>inicializado/exibido no template</mark>, geralmente usado para fazer a
+    chamada do servidor para <mark>obter dados e mostrar</mark> no template.
+  </li>
+  <li>
+    ngOnChange() - é uma função que será executada sempre que algum dado de uma
+    propriedade vinculado ao <mark>componente for alterada</mark>, geralmente
+    usada com inputs porperties.
+  </li>
+  <li>
+    ngOnDestroy() - é uma função que será executada antes do componente
+    <mark> ser destruido </mark>, geralmente usado para limpeza.
+  </li>
 </ul>

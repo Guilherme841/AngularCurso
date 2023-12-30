@@ -1,9 +1,9 @@
 <div class="container-contador">
   <button class="btn btn-success" (click)="incremeto()">+</button>
-  <input type="number" class="input-number" [value]="valor" readonly />
+  <input type="number" class="input-number" [value]="valor" readonly #fieldInput/>
   <!-- readonly pra n editar -->
   <button class="btn btn-danger" (click)="decremento()">-</button>
   <button class="btn btn-warning" (click)="reset()">G</button>
-  <p>Output-property: <mark>"Arroba"output()</mark>, Cria um <mark>Event Binding</mark> ("nomeDoEvent") que <mark>pode ser escutado por outro componente</mark> e executar uma <mark>função do mesmo</mark>, como é declarado: <mark>"nomeDoEvent": any = new EventEmitter()</mark> e exposto com o <mark>decorator</mark> citado antes, para disparar o evento "nomeDoEvent", é preciso executar chamando a propriedade <mark>".emit("parametro")"</mark> no <mark>mesmo componente</mark> em que foi criado.
+  <p>Output-property: <mark>"Arroba"output()</mark>, Cria um <mark>Event Binding</mark> ("nomeDoEvent") que <mark>pode ser escutado por outro componente</mark> e executar uma <mark>função do mesmo</mark>, como é declarado: <mark>"nomeDoEvent": any = new EventEmitter()</mark> e exposto com o <mark>decorator</mark> citado antes, para disparar o evento "nomeDoEvent", é preciso executar chamando a propriedade <mark>".emit("parametro")"</mark> no <mark>mesmo componente</mark> em que foi criado, decorator
   </p>
 </div>

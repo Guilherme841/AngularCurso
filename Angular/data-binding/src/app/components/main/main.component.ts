@@ -68,8 +68,8 @@ export class MainComponent {
     }
   }
   getValue(valor: any) {
-    console.log(valor.newValue);
-    console.log(valor); // objeto
+    // console.log(valor.newValue);
+    // console.log(valor);
   }
   selectedOption(valueOption: any) {
     // console.log(valueOption);

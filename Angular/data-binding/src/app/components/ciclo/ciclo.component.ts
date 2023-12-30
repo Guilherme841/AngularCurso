@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './ciclo.component.html',
   styleUrl: './ciclo.component.css',
 })
-export class CicloComponent  {
-
-}
+export class CicloComponent {}

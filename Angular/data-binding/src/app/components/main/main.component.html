@@ -7,6 +7,11 @@
       </button>
     </div>
     <p>
+      <a href="https://angular.io/guide/interpolation" target="_blank"
+        >INTERPOLAÇÂO</a
+      >
+    </p>
+    <p>
       Interpolação são feitas abrindo <mark>duas vezes chaves</mark>, podem ser
       usadas para <mark>chamar funções</mark>,mostrar dado de uma variavel,
       executar algo e <mark> fazer alguma condição </mark>, por exemplo se
@@ -24,6 +29,11 @@
         more
       </button>
     </div>
+    <p>
+      <a href="https://angular.io/guide/property-binding" target="_blank"
+        >PROPERTY BINDING</a
+      >
+    </p>
     <p>
       Property binding é colocado uma propriedade do elemento
       <mark> dentro de colchetes </mark>, sendo assim posso
@@ -52,6 +62,21 @@
         more
       </button>
     </div>
+    <p>
+      <a
+        href="https://angular.io/guide/template-reference-variables"
+        target="_blank"
+        >Local Variable</a
+      >
+    </p>
+    <p>
+      <a href="https://angular.io/guide/class-binding" target="_blank"
+        >Class Binding</a
+      >
+    </p>
+    <p>
+      <a href="https://angular.io/guide/event-binding" target="_blank">Event Binding</a>
+    </p>
     <p>
       Váriavel local é <mark>declarada com "#"</mark>, pode ser usada para
       <mark> acessar propriedades do elemento </mark>(pode ser usada em todo
@@ -124,6 +149,9 @@
       </button>
     </div>
     <p>
+      <a href="https://angular.io/guide/event-binding" target="_blank">Event Binding</a>
+    </p>
+    <p>
       Event Binding, são formas de escutar mudanças/eventos e chamar funções,
       <mark>para mandar informações do event</mark> binging disparado é enviado
       <mark>"$event"</mark> como parametro.
@@ -156,6 +184,7 @@
         more
       </button>
     </div>
+    <p><a href="https://angular.io/guide/inputs-outputs" target="_blank">Input/Output Property</a></p>
     <div>
       <app-input-property [valorString]="valorString"></app-input-property>
       <contador [valor]="valor" (valueChanged)="getValue($event)"></contador>
@@ -170,9 +199,16 @@
       </button>
     </div>
     <div>
-      <app-cycle-metodo [inicialValue]="inicialValue" *ngIf="!whouldLikeDelete"></app-cycle-metodo>
-      <button class="btn btn-primary" (click)="inicialValue = 10">Mudar valor</button>
-      <button class="btn btn-primary" (click)="whouldLikeDelete = true">Destruir componente</button>
+      <app-cycle-metodo
+        [inicialValue]="inicialValue"
+        *ngIf="!whouldLikeDelete"
+      ></app-cycle-metodo>
+      <button class="btn btn-primary" (click)="inicialValue = 10">
+        Mudar valor
+      </button>
+      <button class="btn btn-primary" (click)="whouldLikeDelete = true">
+        Destruir componente
+      </button>
       <app-ciclo></app-ciclo>
     </div>
   </article>

@@ -31,33 +31,33 @@ export class CycleMetodoComponent
 {
   @Input() inicialValue: number = 10;
   constructor() {
-    this.log('construtor');
+    // this.log('construtor');
   }
   ngOnInit(): void {
-    this.log('ngOnInit');
+    // this.log('ngOnInit');
   }
   ngOnChanges(): void {
-    this.log('OnChanges');
+    // this.log('OnChanges');
   }
   ngOnDestroy(): void {
-    this.log('OnDestroy');
+    // this.log('OnDestroy');
   }
   ngDoCheck(): void {
-    this.log('doCheck');
+    // this.log('doCheck');
   }
   ngAfterContentChecked(): void {
-    this.log('AfterContentChecked');
+    // this.log('AfterContentChecked');
   }
   ngAfterContentInit(): void {
-    this.log('AfterContentInit');
+    // this.log('AfterContentInit');
   }
   ngAfterViewInit(): void {
-    this.log('AfterViewInit');
+    // this.log('AfterViewInit');
   }
   ngAfterViewChecked(): void {
-    this.log('AfterViewChecked');
+    // this.log('AfterViewChecked');
   }
   private log(hook: string) {
-    console.log(hook)
+    console.log(hook);
   }
 }
