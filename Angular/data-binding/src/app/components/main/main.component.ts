@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { MyFormComponent } from '../my-form/my-form.component';
@@ -6,6 +6,7 @@ import { InputPropertyComponent } from '../input-property/input-property.compone
 import { OutputPropertyComponent } from '../output-property/output-property.component';
 import { CicloComponent } from '../ciclo/ciclo.component';
 import { CycleMetodoComponent } from '../ciclo/cycle-metodo/cycle-metodo.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -17,6 +18,7 @@ import { CycleMetodoComponent } from '../ciclo/cycle-metodo/cycle-metodo.compone
     OutputPropertyComponent,
     CicloComponent,
     CycleMetodoComponent,
+    CommonModule,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
@@ -28,6 +30,8 @@ export class MainComponent {
   valorString: string = 'EMPTY';
   valor: number = 5;
   showedCycle: boolean = false;
+  inicialValue: number = 0;
+  whouldLikeDelete: boolean = false;
   getOrder() {
     return true;
   }

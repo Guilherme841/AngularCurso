@@ -8,6 +8,7 @@ import {
   AfterContentInit,
   AfterViewInit,
   AfterViewChecked,
+  Input,
 } from '@angular/core';
 
 @Component({
@@ -28,31 +29,35 @@ export class CycleMetodoComponent
     AfterViewInit,
     AfterViewChecked
 {
+  @Input() inicialValue: number = 10;
   constructor() {
-    console.log('construtor');
+    this.log('construtor');
   }
   ngOnInit(): void {
-    console.log('ngOnInit');
+    this.log('ngOnInit');
   }
   ngOnChanges(): void {
-    console.log('OnChanges');
+    this.log('OnChanges');
   }
   ngOnDestroy(): void {
-    console.log('OnDestroy');
+    this.log('OnDestroy');
   }
   ngDoCheck(): void {
-    console.log('doCheck');
+    this.log('doCheck');
   }
   ngAfterContentChecked(): void {
-    console.log('AfterContentChecked');
+    this.log('AfterContentChecked');
   }
   ngAfterContentInit(): void {
-    console.log('AfterContentInit');
+    this.log('AfterContentInit');
   }
   ngAfterViewInit(): void {
-    console.log('AfterViewInit');
+    this.log('AfterViewInit');
   }
   ngAfterViewChecked(): void {
-    console.log('AfterViewChecked');
+    this.log('AfterViewChecked');
+  }
+  private log(hook: string) {
+    console.log(hook)
   }
 }

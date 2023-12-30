@@ -170,10 +170,9 @@
       </button>
     </div>
     <div>
-      <button class="btn btn-primary" (click)="showedCycle = !showedCycle">Carregar componente com métodos de cycles</button>
-      @if (showedCycle == true) {
-        <app-cycle-metodo></app-cycle-metodo>
-      }
+      <app-cycle-metodo [inicialValue]="inicialValue" *ngIf="!whouldLikeDelete"></app-cycle-metodo>
+      <button class="btn btn-primary" (click)="inicialValue = 10">Mudar valor</button>
+      <button class="btn btn-primary" (click)="whouldLikeDelete = true">Destruir componente</button>
       <app-ciclo></app-ciclo>
     </div>
   </article>
