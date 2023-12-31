@@ -1,0 +1,8 @@
+.lista-ng {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: decimal;
+}
+.lista-ng > li {
+  border-bottom: 1px dashed gray;
+}
