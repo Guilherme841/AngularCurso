@@ -5,7 +5,21 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-body
-, html {
+body,
+html {
   background-color: gray;
+}
+.article-aula {
+  height: 75px;
+  overflow-y: hidden;
+  border-bottom: 3px solid gray;
+}
+.container-aula {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.showed-article {
+  height: auto;
 }

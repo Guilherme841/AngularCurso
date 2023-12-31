@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './diretiva-if.component.html',
-  styleUrl: './diretiva-if.component.css'
+  styleUrl: './diretiva-if.component.css',
 })
-export class DiretivaIfComponent {
-
-}
+export class DiretivaIfComponent {}
