@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { MyFormComponent } from '../my-form/my-form.component';
 import { InputPropertyComponent } from '../input-property/input-property.component';
 import { OutputPropertyComponent } from '../output-property/output-property.component';
 import { CicloComponent } from '../ciclo/ciclo.component';
 import { CycleMetodoComponent } from '../ciclo/cycle-metodo/cycle-metodo.component';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -59,11 +59,10 @@ export class MainComponent {
   }
   articleOpen: boolean = false;
   openArticle(event: Event) {
-    // console.log(event)
     let button = event.target as HTMLElement;
     if (button.classList.contains('button')) {
-      let article = button.closest('.article-aula');
-      article?.classList.toggle('article-open');
+      let clickedArticle = button.closest('.article-aula');
+      clickedArticle?.classList.toggle('article-open');
       button.textContent = button.textContent === 'less' ? 'more' : 'less';
     }
   }

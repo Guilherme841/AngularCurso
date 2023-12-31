@@ -1,4 +1,4 @@
-<main (click)="openArticle($event)">
+<main #clickedArticle (click)="openArticle($event)">
   <article class="interpolacao article-aula">
     <div class="container-tittle">
       <h1>INTERPOLAÇÂO</h1>
@@ -190,7 +190,7 @@
       <contador [valor]="valor" (valueChanged)="getValue($event)"></contador>
     </div>
   </article>
-  <article class="ciclo-componetne">
+  <article class="ciclo-componetne article-aula">
     <!-- article-aula -->
     <div class="container-tittle">
       <h1>Ciclo do componente</h1>
@@ -204,10 +204,10 @@
         *ngIf="!whouldLikeDelete"
       ></app-cycle-metodo>
       <button class="btn btn-primary" (click)="inicialValue = 10">
-        Mudar valor
+        Mudar valor <!-- dispara método lifecycle ngOnChange() -->
       </button>
       <button class="btn btn-primary" (click)="whouldLikeDelete = true">
-        Destruir componente
+        Destruir componente <!-- dispara o método lifecycle ngOnDestroy()-->
       </button>
       <app-ciclo></app-ciclo>
     </div>
