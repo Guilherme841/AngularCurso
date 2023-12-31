@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+  background-color: lightblue;
+  position: sticky;
+  top: 0;
+}
+nav {
+  display: flex;
+  gap: 10px;
+}
+header a {
+  color: inherit;
+  text-decoration: none;
+}
