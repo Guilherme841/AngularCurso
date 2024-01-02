@@ -6,3 +6,7 @@
 .lista-ng > li {
   border-bottom: 1px dashed gray;
 }
+li:hover {
+  font-weight: bold;
+  background-color: lightskyblue;
+}
