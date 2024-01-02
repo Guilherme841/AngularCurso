@@ -5,6 +5,7 @@
 }
 .lista-ng > li {
   border-bottom: 1px dashed gray;
+  width: 90%;
 }
 li:hover {
   font-weight: bold;
