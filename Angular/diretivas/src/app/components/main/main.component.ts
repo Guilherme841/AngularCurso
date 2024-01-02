@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
   showedArticle(button: Event) {
-    let buttonClicked = button.target as HTMLElement;
-    let fatherArticle = buttonClicked.closest('.article-aula');
+    const buttonClicked = button.target as HTMLElement;
+    const fatherArticle = buttonClicked.closest('.article-aula');
     fatherArticle?.classList.toggle('showed-article');
   }
 }

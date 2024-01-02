@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr;
   list-style: decimal;
 }
+p {
+  margin: 0;
+  font-weight: bold;
+}
 .lista-ng > li {
   border-bottom: 1px dashed gray;
   width: 90%;
