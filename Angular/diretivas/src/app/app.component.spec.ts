@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('diretivas');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, diretivas');
-  });
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);           ESPERAVA A TAG <h1></h1> DO APP.COMPONENT.HTML
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement as HTMLElement;
+  //   expect(compiled.querySelector('h1')?.textContent).toContain('Hello, diretivas');
+  // });
 });
