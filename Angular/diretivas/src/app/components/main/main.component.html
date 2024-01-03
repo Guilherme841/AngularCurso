@@ -12,12 +12,13 @@
   </article>
   <article class="EMPTY article-aula">
     <div class="container-aula">
-      <h1>DIRETIVAS</h1>
+      <h1>DIRETIVAS ESTRUTURAIS</h1>
       <button class="btn btn-secondary btn-sm" (click)="showedArticle($event)">
         MORE
       </button>
     </div>
     <div>
+      <p>Diretivas Estruturais - Interagem view e modifica o DOM ou código HTML</p>
       <p>Componentes são diretivas com Template</p>
       <p>*ngFor - é uma diretiva(loop)</p>
       <ul>
@@ -27,13 +28,16 @@
           {{ item + "" + nome }}
         </li>
       </ul>
-      <p>*ngIf - é uma diretiva de condição(if & else)</p> <!-- Nova forma de escrita: @if () {} @else {} -->
+      <p>*ngIf - é uma diretiva de condição(if & else)</p>
+      <!-- Nova forma de escrita: @if () {} @else {} -->
       @if (isTrue) {
-        <p>Boolean True!</p>
+      <p>Boolean True!</p>
       } @else {
-        <p>Boolean False!</p>
+      <p>Boolean False!</p>
       }
-      <button class="btn btn-primary" (click)="isTrue = !isTrue">Boolean Toggle</button>
+      <button class="btn btn-primary" (click)="isTrue = !isTrue">
+        Boolean Toggle
+      </button>
     </div>
   </article>
 </main>

@@ -26,4 +26,8 @@ html {
 
 .showed-article {
   height: auto;
+}
+
+p, li {
+  font-size: 1.5em;
 }/*# sourceMappingURL=styles.css.map */
