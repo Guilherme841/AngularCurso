@@ -15,4 +15,14 @@ li:hover {
   font-weight: bold;
   background-color: lightskyblue;
 }
+img {
+  width: 250px;
+  height: 150px;
 
+}
+
+img:hover {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
