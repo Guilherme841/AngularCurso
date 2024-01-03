@@ -1,29 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 body,
 html {
   background-color: gray;
 }
-
 .article-aula {
   height: 75px;
   overflow-y: hidden;
   border-bottom: 3px solid gray;
 }
-
 .container-aula {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .showed-article {
   height: auto;
-}/*# sourceMappingURL=styles.css.map */
+}
