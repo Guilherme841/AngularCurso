@@ -20,5 +20,7 @@ export class MainComponent {
     const buttonClicked = button.target as HTMLElement;
     const fatherArticle = buttonClicked.closest('.article-aula');
     fatherArticle?.classList.toggle('showed-article');
+    buttonClicked.textContent =
+      buttonClicked.textContent === 'LESS' ? 'MORE' : 'LESS';
   }
 }
