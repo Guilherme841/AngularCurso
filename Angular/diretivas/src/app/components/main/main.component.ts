@@ -13,7 +13,9 @@ import { DiretivaIfComponent } from '../diretiva-if/diretiva-if.component';
 })
 export class MainComponent {
   nome: string = 'Fulano';
-  isTrue: boolean = false;
+  isTrueToggle: boolean = false;
+  isTrueClass: boolean = false;
+  isTrueStyle: boolean = false;
   showedArticle(button: Event) {
     const buttonClicked = button.target as HTMLElement;
     const fatherArticle = buttonClicked.closest('.article-aula');
