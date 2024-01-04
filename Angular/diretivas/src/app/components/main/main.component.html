@@ -3,7 +3,10 @@
     <article class="estrutura article-aula">
       <div class="container-aula">
         <h1>COMANDOS CLI/ESTRUTURAS</h1>
-        <button class="btn btn-secondary btn-sm" (click)="showedArticle($event)">
+        <button
+          class="btn btn-secondary btn-sm"
+          (click)="showedArticle($event)"
+        >
           MORE
         </button>
       </div>
@@ -14,25 +17,37 @@
     <article class="diretivas-estruturais article-aula">
       <div class="container-aula">
         <h1>DIRETIVAS ESTRUTURAIS</h1>
-        <button class="btn btn-secondary btn-sm" (click)="showedArticle($event)">
+        <button
+          class="btn btn-secondary btn-sm"
+          (click)="showedArticle($event)"
+        >
           MORE
         </button>
       </div>
       <div>
         <p>
-          Diretivas Estruturais - Interagem com a view e modifica o DOM ou código
-          HTML. 2 exemplos nesse article.
+          Diretivas Estruturais - Interagem com a view e modifica o DOM ou
+          código HTML. 2 exemplos nesse article.
         </p>
         <p>Componentes são diretivas com Template.</p>
         <p>*ngFor - é uma diretiva(loop).</p>
         <ul>
-          <li *ngFor="let item of [1, 2, 3, 4, 5]">
+          <li *ngFor="let item of indexNome">
             <!-- para cada index do array ele vai executar oque tem dentro do
             ngFor(item guarda o index). -->
             {{ item + "" + nome }}
           </li>
         </ul>
         <p>*ngIf - é uma diretiva de condição(if & else)</p>
+        <p>
+          [hidden] - Também é uma opção, ele deixa o elemento no <mark>dom ocultado</mark>, mas ainda é visível no devTools,
+          enquanto <mark>ngIf o remove</mark>. "hidden" mais apropriado em casos de <mark>dinâmica</mark>, porque age como um
+          cache de elemento e mais propícios a <mark>alertas</mark> simples(árvores pequenas). ngIf se sai melhor com <mark>árvores grandes.</mark>
+        </p>
+        <p *ngIf="isTrueToggle; else emptyUser">Contem Usuários!</p>
+        <ng-template #emptyUser
+          ><p [style.font-size]="'1.5em'">Sem Users!</p></ng-template
+        >
         <!-- Nova forma de escrita: @if () {} @else {} -->
         @if (isTrueToggle) {
         <p>Boolean True!</p>
@@ -47,7 +62,10 @@
     <article class="diretivas-de-atributos article-aula">
       <div class="container-aula">
         <h1>DIRETIVAS DE ATRIBUTO</h1>
-        <button class="btn btn-secondary btn-sm" (click)="showedArticle($event)">
+        <button
+          class="btn btn-secondary btn-sm"
+          (click)="showedArticle($event)"
+        >
           MORE
         </button>
       </div>
@@ -61,7 +79,7 @@
         <button
           #class
           (click)="isTrueClass = !isTrueClass"
-          [ngClass]="{ clicado: isTrueClass, desclicado: !isTrueClass }"
+          [ngClass]="{ clicado: isTrueClass, naoClicado: !isTrueClass }"
           class="btn btn-primary"
         >
           Add Class!

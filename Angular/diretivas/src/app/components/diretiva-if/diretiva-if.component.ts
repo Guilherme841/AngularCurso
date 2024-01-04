@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './diretiva-if.component.html',
   styleUrl: './diretiva-if.component.css',
 })
-export class DiretivaIfComponent { }
+export class DiretivaIfComponent {}

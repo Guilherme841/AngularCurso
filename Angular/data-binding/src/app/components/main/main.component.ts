@@ -31,7 +31,7 @@ export class MainComponent {
   valor: number = 5;
   showedCycle: boolean = false;
   inicialValue: number = 0;
-  whouldLikeDelete: boolean = false;
+  wouldLikeDelete: boolean = false;
   getOrder() {
     return true;
   }

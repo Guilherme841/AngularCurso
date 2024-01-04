@@ -13,6 +13,9 @@ import { DiretivaIfComponent } from '../diretiva-if/diretiva-if.component';
 })
 export class MainComponent {
   nome: string = 'Fulano';
+  indexNome: Array<number> = [1, 2, 3, 4, 5];
+  indexUser: Array<number> = [1, 2, 3, 4, 5];
+  emptyUser: string = '';
   isTrueToggle: boolean = false;
   isTrueClass: boolean = false;
   isTrueStyle: boolean = false;
