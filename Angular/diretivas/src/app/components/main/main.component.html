@@ -27,10 +27,11 @@
       <div>
         <p>
           Diretivas Estruturais - Interagem com a view e modifica o DOM ou
-          código HTML. 2 exemplos nesse article.
+          código HTML.
         </p>
         <p>Componentes são diretivas com Template.</p>
         <p>*ngFor - é uma diretiva(loop).</p>
+        <p>Exemplos a seguir</p>
         <ul>
           <li *ngFor="let item of indexNome">
             <!-- para cada index do array ele vai executar oque tem dentro do
@@ -40,9 +41,12 @@
         </ul>
         <p>*ngIf - é uma diretiva de condição(if & else)</p>
         <p>
-          [hidden] - Também é uma opção, ele deixa o elemento no <mark>dom ocultado</mark>, mas ainda é visível no devTools,
-          enquanto <mark>ngIf o remove</mark>. "hidden" mais apropriado em casos de <mark>dinâmica</mark>, porque age como um
-          cache de elemento e mais propícios a <mark>alertas</mark> simples(árvores pequenas). ngIf se sai melhor com <mark>árvores grandes.</mark>
+          [hidden] - Também é uma opção, ele deixa o elemento no
+          <mark>dom ocultado</mark>, mas ainda é visível no devTools, enquanto
+          <mark>ngIf o remove</mark>. "hidden" mais apropriado em casos de
+          <mark>dinâmica</mark>, porque age como um cache de elemento e mais
+          propícios a <mark>alertas</mark> simples(árvores pequenas). ngIf se
+          sai melhor com <mark>árvores grandes.</mark>
         </p>
         <p *ngIf="isTrueToggle; else emptyUser">Contem Usuários!</p>
         <ng-template #emptyUser
@@ -57,6 +61,11 @@
         <button class="btn btn-primary" (click)="isTrueToggle = !isTrueToggle">
           Boolean Toggle
         </button>
+        <div [ngSwitch]="cases">
+          <p *ngSwitchCase="1">Switch 1.</p>
+          <p *ngSwitchCase="2">Switch 2.</p>
+          <p *ngSwitchDefault>Switch Default.</p>
+        </div>
       </div>
     </article>
     <article class="diretivas-de-atributos article-aula">
@@ -74,7 +83,7 @@
           Diretivas De Atributo - Interagem com o elemento que foi
           aplicada.(Adiciona uma propriedade/atributo).
         </p>
-        <p>2 exemplos nesse article.</p>
+        <p>Exemplos a seguir</p>
         <div></div>
         <button
           #class
