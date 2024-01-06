@@ -16,7 +16,7 @@ export class MainComponent {
   indexNome: Array<number> = [1, 2, 3, 4, 5];
   indexUser: Array<number> = [1, 2, 3, 4, 5];
   emptyUser: string = '';
-  cases: number = 2;
+  cases: number = 1;
   isTrueToggle: boolean = false;
   isTrueClass: boolean = false;
   isTrueStyle: boolean = false;
