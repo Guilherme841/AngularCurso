@@ -6,7 +6,7 @@ import { DiretivaIfComponent } from '../diretivas-estruturais/diretiva-if/direti
 import { DiretivaSwitchComponent } from '../diretivas-estruturais/diretiva-switch/diretiva-switch.component';
 import { DiretivaForComponent } from '../diretivas-estruturais/diretiva-for/diretiva-for.component';
 import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component';
-import { DiretivaClassComponent } from '../diretivas-atribuitivas/diretiva-class/diretiva-class.component';
+import { DiretivaClassComponent } from '../diretivas-atributivas/diretiva-class/diretiva-class.component';
 
 @Component({
   selector: 'app-main',
