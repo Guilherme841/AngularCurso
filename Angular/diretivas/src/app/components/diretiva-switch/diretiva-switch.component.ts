@@ -9,11 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './diretiva-switch.component.scss',
 })
 export class DiretivaSwitchComponent {
-  cases: string = '';
-
-  // openMenu(popUp: MouseEvent) {
-  //   const popUpTarget = popUp.target as HTMLElement;
-  //   popUpTarget.classList.toggle("clicked-menu");
-  //   console.log(popUpTarget.textContent);
-  // }
+  cases: string = 'home';
 }

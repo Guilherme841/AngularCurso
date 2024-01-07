@@ -19,17 +19,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" (click)="cases = 'Features'">Features</a>
-          <div [ngSwitch]="cases">
-            <div class="menu-pop-up" *ngSwitchCase="'Features'">
-              Features Menu
-            </div>
-          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" (click)="cases = 'Pricing'">Pricing</a>
-          <div [ngSwitch]="cases">
-            <div class="menu-pop-up" *ngSwitchCase="'Pricing'">Pricing Menu</div>
-          </div>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -38,15 +30,17 @@
     </div>
   </div>
 </nav>
-<div [ngSwitch]="cases">
-  <p *ngSwitchCase="1">Switch 1.</p>
-  <p *ngSwitchCase="2">Switch 2.</p>
-  <p *ngSwitchDefault>Switch Default.</p>
-</div>
-<!-- @switch (cases) { @case (1) {
-<p>Case 1.</p>
-} @case (2) {
-<p>Case 2.</p>
+
+@switch (cases) { @case ('Features') {
+<div class="pop-up-menu">Pop-up Features!</div>
+} @case ('Pricing') {
+<div class="pop-up-menu">Pop-up Pricing!</div>
 } @default {
-<p>Switch Default.</p>
-} } -->
+<div class="pop-up-menu">Pop-up Default!</div>
+} }
+
+<!-- <div class="container" [ngSwitch]="cases"> 
+  <div *ngSwitchCase="'Features'" class="pop-up-menu">Pop-up Features!</div>
+  <div *ngSwitchCase="'Pricing'" class="pop-up-menu">Pop-up Pricing!</div>
+  <div *ngSwitchDefault class="pop-up-menu">Pop-up Default!</div>
+</div> -->

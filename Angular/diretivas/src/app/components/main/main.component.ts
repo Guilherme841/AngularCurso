@@ -8,7 +8,12 @@ import { DiretivaSwitchComponent } from '../diretiva-switch/diretiva-switch.comp
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, FormsModule, DiretivaIfComponent,DiretivaSwitchComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    DiretivaIfComponent,
+    DiretivaSwitchComponent,
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
