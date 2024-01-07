@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './diretiva-class.component.html',
-  styleUrl: './diretiva-class.component.scss'
+  styleUrl: './diretiva-class.component.scss',
 })
 export class DiretivaClassComponent {
-
+  starBoolean: boolean = false;
 }
