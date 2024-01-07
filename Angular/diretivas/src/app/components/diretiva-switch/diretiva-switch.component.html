@@ -15,13 +15,25 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <span>Home</span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="cases = 'Features'">Features</a>
+          <span
+            (click)="cases = 'Features'"
+            (keyup.enter)="cases = 'Features'"
+            tabindex="0"
+            >Features</span
+          > <!-- keyup.enter - evento que escuta a tecla enter -->
+            <!-- tabindex - deixa o elemento navegável com o tab -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="cases = 'Pricing'">Pricing</a>
+          <span
+            #tecla
+            (click)="cases = 'Pricing'"
+            (keyup.enter)="cases = 'Pricing'"
+            tabindex="0"
+            >Pricing</span
+          >
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -39,7 +51,7 @@
 <div class="pop-up-menu">Pop-up Default!</div>
 } }
 
-<!-- <div class="container" [ngSwitch]="cases"> 
+<!-- <div class="container" [ngSwitch]="cases">
   <div *ngSwitchCase="'Features'" class="pop-up-menu">Pop-up Features!</div>
   <div *ngSwitchCase="'Pricing'" class="pop-up-menu">Pop-up Pricing!</div>
   <div *ngSwitchDefault class="pop-up-menu">Pop-up Default!</div>

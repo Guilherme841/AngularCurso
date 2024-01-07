@@ -3,3 +3,9 @@
   height: 100px;
   background-color: lightskyblue;
 }
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
