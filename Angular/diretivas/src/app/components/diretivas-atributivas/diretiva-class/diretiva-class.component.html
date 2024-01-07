@@ -1,6 +1,6 @@
 <h1 class="container">
   <i
-    (keyup.enter)="('')"
+    (keyup.enter)="(starBoolean = !starBoolean)"
     tabindex="0"
     (click)="starBoolean = !starBoolean"
     [ngClass]="{ 'bi-star': !starBoolean, 'bi-star-fill': starBoolean }"
@@ -10,7 +10,7 @@
 <span>Sem a diretiva "ngClass".</span>
 <h1 class="container">
   <i
-    (keyup.enter)="('')"
+    (keyup.enter)="(starBoolean = !starBoolean)"
     tabindex="0"
     (click)="starBoolean = !starBoolean"
     [class.bi-star]="!starBoolean"
