@@ -1,0 +1,12 @@
+<div [ngSwitch]="cases">
+  <p *ngSwitchCase="1">Switch 1.</p>
+  <p *ngSwitchCase="2">Switch 2.</p>
+  <p *ngSwitchDefault>Switch Default.</p>
+</div>
+@switch (cases) { @case (1) {
+<p>Case 1.</p>
+} @case (2) {
+<p>Case 2.</p>
+} @default {
+<p>Switch Default.</p>
+} }

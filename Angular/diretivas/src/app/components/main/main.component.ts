@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DiretivaIfComponent } from '../diretiva-if/diretiva-if.component';
+import { DiretivaSwitchComponent } from '../diretiva-switch/diretiva-switch.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, FormsModule, DiretivaIfComponent],
+  imports: [CommonModule, FormsModule, DiretivaIfComponent,DiretivaSwitchComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
@@ -16,7 +17,6 @@ export class MainComponent {
   indexNome: Array<number> = [1, 2, 3, 4, 5];
   indexUser: Array<number> = [1, 2, 3, 4, 5];
   emptyUser: string = '';
-  cases: number = 1;
   isTrueToggle: boolean = false;
   isTrueClass: boolean = false;
   isTrueStyle: boolean = false;
