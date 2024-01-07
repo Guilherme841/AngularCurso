@@ -2,10 +2,11 @@ import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DiretivaIfComponent } from '../diretiva-if/diretiva-if.component';
-import { DiretivaSwitchComponent } from '../diretiva-switch/diretiva-switch.component';
-import { DiretivaForComponent } from '../diretiva-for/diretiva-for.component';
+import { DiretivaIfComponent } from '../diretivas-estruturais/diretiva-if/diretiva-if.component';
+import { DiretivaSwitchComponent } from '../diretivas-estruturais/diretiva-switch/diretiva-switch.component';
+import { DiretivaForComponent } from '../diretivas-estruturais/diretiva-for/diretiva-for.component';
 import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component';
+import { DiretivaClassComponent } from '../diretivas-atribuitivas/diretiva-class/diretiva-class.component';
 
 @Component({
   selector: 'app-main',
@@ -17,6 +18,7 @@ import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component'
     DiretivaSwitchComponent,
     DiretivaForComponent,
     CliEstruturaComponent,
+    DiretivaClassComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',

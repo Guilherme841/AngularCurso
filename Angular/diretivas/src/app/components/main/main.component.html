@@ -25,6 +25,7 @@
         </button>
       </div>
       <div>
+        <p>Diretivas usam o prefixo "*ng".</p>
         <app-diretiva-if></app-diretiva-if>
         <app-diretiva-switch></app-diretiva-switch>
         <app-diretiva-for></app-diretiva-for>
@@ -41,26 +42,8 @@
         </button>
       </div>
       <div>
-        <p>
-          Diretivas De Atributo - Interagem com o elemento que foi
-          aplicada.(Adiciona uma propriedade/atributo).
-        </p>
-        <p>Exemplos a seguir</p>
-        <button
-          #class
-          (click)="isTrueClass = !isTrueClass"
-          [ngClass]="{ clicado: isTrueClass, naoClicado: !isTrueClass }"
-          class="btn btn-primary"
-        >
-          Add Class!
-        </button>
-        <button
-          (click)="isTrueStyle = !isTrueStyle"
-          [ngStyle]="{ background: isTrueStyle ? 'red' : '' }"
-          class="btn btn-primary"
-        >
-          Add Style!
-        </button>
+        <p>Diretivas usam o prefixo "*ng".</p>
+        <app-diretiva-class></app-diretiva-class>
       </div>
     </article>
   </section>
