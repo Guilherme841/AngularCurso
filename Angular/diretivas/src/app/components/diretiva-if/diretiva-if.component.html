@@ -21,6 +21,7 @@
 <p>Boolean False!</p>
 }
 <!-- Oque o "*" da diretiva faz: -->
+<!-- Sem o "*" posso usar property bind em alguma diretivas, "preciso" usar elas em uma tag ng-template. -->
 <ng-template [ngIf]="isTrueToggle">
   <p>ngIf com ngTemplate.</p>
 </ng-template>
@@ -28,5 +29,3 @@
 <button class="btn btn-primary" (click)="isTrueToggle = !isTrueToggle">
   Boolean Toggle!
 </button>
-
-
