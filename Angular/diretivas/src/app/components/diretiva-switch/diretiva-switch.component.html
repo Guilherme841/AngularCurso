@@ -1,7 +1,15 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -10,14 +18,22 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#" (click)="cases = 'Features'">Features</a>
+          <div [ngSwitch]="cases">
+            <div class="menu-pop-up" *ngSwitchCase="'Features'">
+              Features Menu
+            </div>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#" (click)="cases = 'Pricing'">Pricing</a>
+          <div [ngSwitch]="cases">
+            <div class="menu-pop-up" *ngSwitchCase="'Pricing'">Pricing Menu</div>
+          </div>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -27,10 +43,10 @@
   <p *ngSwitchCase="2">Switch 2.</p>
   <p *ngSwitchDefault>Switch Default.</p>
 </div>
-@switch (cases) { @case (1) {
+<!-- @switch (cases) { @case (1) {
 <p>Case 1.</p>
 } @case (2) {
 <p>Case 2.</p>
 } @default {
 <p>Switch Default.</p>
-} }
+} } -->
