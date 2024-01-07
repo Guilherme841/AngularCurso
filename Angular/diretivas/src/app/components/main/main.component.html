@@ -11,7 +11,7 @@
         </button>
       </div>
       <div>
-        <app-diretiva-if></app-diretiva-if>
+        <app-cli-estrutura></app-cli-estrutura>
       </div>
     </article>
     <article class="diretivas-estruturais article-aula">
@@ -25,46 +25,9 @@
         </button>
       </div>
       <div>
-        <p>
-          Diretivas Estruturais - Interagem com a view e modifica o DOM ou
-          código HTML.
-        </p>
-        <p>Componentes são diretivas com Template.</p>
-        <p>*ngFor - é uma diretiva(loop).</p>
-        <p>Exemplos a seguir</p>
-        <ul>
-          <li *ngFor="let item of indexNome">
-            <!-- para cada index do array ele vai executar oque tem dentro do
-            ngFor(item guarda o index). -->
-            {{ item + "" + nome }}
-          </li>
-        </ul>
-        <p>*ngIf - é uma diretiva de condição(if & else)</p>
-        <p>
-          [hidden] - Também é uma opção, ele deixa o elemento no
-          <mark>dom ocultado</mark>, mas ainda é visível no devTools, enquanto
-          <mark>ngIf o remove</mark>. "hidden" mais apropriado em casos de
-          <mark>dinâmica</mark>, porque age como um cache de elemento e mais
-          propícios a <mark>alertas</mark> simples(árvores pequenas). ngIf se
-          sai melhor com <mark>árvores grandes.</mark>
-        </p>
-        <p *ngIf="isTrueToggle; else emptyUser">Contem Usuários!</p>
-        <ng-template #emptyUser
-          ><p [style.font-size]="'1.5em'">Sem Users!</p></ng-template
-        >
-        <!-- Nova forma de escrita: @if () {} @else {} -->
-        @if (isTrueToggle) {
-        <p>Boolean True!</p>
-        } @else {
-        <p>Boolean False!</p>
-        }
-        <button class="btn btn-primary" (click)="isTrueToggle = !isTrueToggle">
-          Boolean Toggle
-        </button>
-        <p>Diretiva Switch.</p>
-        <p>keyup.enter - evento que escuta a tecla enter.</p>
-        <p>tabindex - deixa o elemento navegável com o tab.</p>
+        <app-diretiva-if></app-diretiva-if>
         <app-diretiva-switch></app-diretiva-switch>
+        <app-diretiva-for></app-diretiva-for>
       </div>
     </article>
     <article class="diretivas-de-atributos article-aula">

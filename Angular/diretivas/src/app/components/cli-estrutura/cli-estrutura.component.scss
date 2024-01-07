@@ -1,0 +1,26 @@
+.lista-ng {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: decimal;
+}
+p {
+  margin: 0;
+  font-weight: bold;
+}
+.lista-ng > li {
+  border-bottom: 1px dashed gray;
+  width: 90%;
+}
+li:hover {
+  font-weight: bold;
+  background-color: lightskyblue;
+}
+img {
+  width: 250px;
+  height: 150px;
+}
+img:hover {
+  position: absolute;
+  width: auto;
+  height: auto;
+}

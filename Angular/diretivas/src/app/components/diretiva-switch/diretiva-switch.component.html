@@ -1,3 +1,6 @@
+<p>Diretiva Switch.</p>
+<p>keyup.enter - evento que escuta a tecla enter.</p>
+<p>tabindex - deixa o elemento navegável com o tab.</p>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -23,8 +26,9 @@
             (keyup.enter)="cases = 'Features'"
             tabindex="0"
             >Features</span
-          > <!-- keyup.enter - evento que escuta a tecla enter -->
-            <!-- tabindex - deixa o elemento navegável com o tab -->
+          >
+          <!-- keyup.enter - evento que escuta a tecla enter -->
+          <!-- tabindex - deixa o elemento navegável com o tab -->
         </li>
         <li class="nav-item">
           <span
@@ -42,6 +46,13 @@
     </div>
   </div>
 </nav>
+<!-- <div class="container" [ngSwitch]="cases">
+  <div *ngSwitchCase="'Features'" class="pop-up-menu">Pop-up Features!</div>
+  <div *ngSwitchCase="'Pricing'" class="pop-up-menu">Pop-up Pricing!</div>
+  <div *ngSwitchDefault class="pop-up-menu">Pop-up Default!</div>
+</div> -->
+
+<!-- Nova sintaxe: -->
 
 @switch (cases) { @case ('Features') {
 <div class="pop-up-menu">Pop-up Features!</div>
@@ -50,9 +61,3 @@
 } @default {
 <div class="pop-up-menu">Pop-up Default!</div>
 } }
-
-<!-- <div class="container" [ngSwitch]="cases">
-  <div *ngSwitchCase="'Features'" class="pop-up-menu">Pop-up Features!</div>
-  <div *ngSwitchCase="'Pricing'" class="pop-up-menu">Pop-up Pricing!</div>
-  <div *ngSwitchDefault class="pop-up-menu">Pop-up Default!</div>
-</div> -->

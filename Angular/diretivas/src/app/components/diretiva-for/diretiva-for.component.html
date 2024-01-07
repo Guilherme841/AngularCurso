@@ -1,0 +1,14 @@
+<p>Diretiva For.</p>
+<ul>
+  <li *ngFor="let indexUser of users; let i = index">
+    <!-- Posso declarar o index no ngFor -->
+    {{ i + 1 + "-" + indexUser }}
+  </li>
+</ul>
+<p>Nova sintaxe:</p>
+<!-- "track $index" para acessar o index -->
+@for (item of items; track $index) {
+<ul>
+  <li>{{ $index + "-" + item }}</li>
+</ul>
+}

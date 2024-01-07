@@ -1,51 +1,32 @@
-<p>GENERATE:</p>
-<ul class="lista-ng">
-  <li>ng g c [nomeComponente] - cria um componente.</li>
-  <li>ng g m [nomeModulo] - criar modulo.</li>
-  <li>ng g s [nomeServiço] - cria um serviço.</li>
-  <li>ng g d [nomeDiretiva] - cria uma diretiva.</li>
-  <li>ng g p [nomePipe] - cria um pipe.</li>
-  <li>ng g c [nomeClass] - cria uma classe.</li>
-  <li>ng g i [nomeInterface] - cria uma interface.</li>
-  <li>ng g e [nomeEnum] - cria um enum.</li>
-</ul>
-<p>DEV COMANDOS:</p>
-<ul class="lista-ng">
-  <li>NG LINT - Depura o projeto para seguir o style guide(boas praticas)</li>
-  <li>
-    NG TEST - Executa os arquivos ".spec.ts" de teste. Ferramenta: Jasmine e
-    Karma
-  </li>
-  <li>NG e2e - Executa um teste de integração(protractor).</li>
-  <li>NG BUILD - Minifica toda a aplicação.</li>
-  <li>
-    NG BUILD --watch - Minifica toda a aplicação atualizando toda alteração.
-  </li>
-  <li>
-    NG BUILD --configuration development - "Minifica" a aplicação com indentação
-    para ler melhor.
-  </li>
-</ul>
+<p>*ngIf - é uma diretiva de condição(if & else)</p>
 <p>
-  <a href="https://angular.io/guide/file-structure" target="_blank"
-    >Estrutura do projeto</a
-  >
+  [hidden] - Também é uma opção, ele deixa o elemento no
+  <mark>dom ocultado</mark>, mas ainda é visível no devTools, enquanto
+  <mark>ngIf o remove</mark>. "hidden" mais apropriado em casos de
+  <mark>dinâmica</mark>, porque age como um cache de elemento e mais propícios a
+  <mark>alertas</mark> simples(árvores pequenas). ngIf se sai melhor com
+  <mark>árvores grandes.</mark>
 </p>
-<div>
-  <p>Estrutura package.json("arroba"angular/"pacote"):</p>
-  <img src="../../../assets/images-png/Estrutura-do-package.json.png" alt="" />
-</div>
-<div>
-  <p>Estrutura package.json dependencies:</p>
-  <img
-    src="../../../assets/images-png/Estrutura-do-package.json-dependencies.png"
-    alt=""
-  />
-</div>
-<div>
-  <p>Estrutura package.json "DEV-dependências":</p>
-  <img
-    src="../../../assets/images-png/Estrutura-do-package.json-dev-dependencies.png"
-    alt=""
-  />
-</div>
+<p>Diretiva If.</p>
+<p *ngIf="isTrueToggle; else emptyUser">Contem Usuários!</p>
+<ng-template #emptyUser>
+  <p [style.font-size]="'1.5em'">Sem Users!</p>
+  <!-- Variável local pra fazer o else e ng content pra fazer o toggle -->
+</ng-template>
+<!-- Nova forma de escrita: @if () {} @else {} -->
+<!-- Nova sintaxe: -->
+@if (isTrueToggle) {
+<p>Boolean True!</p>
+} @else {
+<p>Boolean False!</p>
+}
+<!-- Oque o "*" da diretiva faz: -->
+<ng-template [ngIf]="isTrueToggle">
+  <p>ngIf com ngTemplate.</p>
+</ng-template>
+
+<button class="btn btn-primary" (click)="isTrueToggle = !isTrueToggle">
+  Boolean Toggle!
+</button>
+
+

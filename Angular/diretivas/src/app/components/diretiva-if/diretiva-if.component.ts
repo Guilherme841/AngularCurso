@@ -1,10 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-diretiva-if',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './diretiva-if.component.html',
   styleUrl: './diretiva-if.component.css',
 })
-export class DiretivaIfComponent {}
+export class DiretivaIfComponent {
+  isTrueToggle: boolean = false;
+}

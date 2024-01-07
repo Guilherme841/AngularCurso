@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 
 import { DiretivaIfComponent } from '../diretiva-if/diretiva-if.component';
 import { DiretivaSwitchComponent } from '../diretiva-switch/diretiva-switch.component';
+import { DiretivaForComponent } from '../diretiva-for/diretiva-for.component';
+import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component';
 
 @Component({
   selector: 'app-main',
@@ -13,6 +15,8 @@ import { DiretivaSwitchComponent } from '../diretiva-switch/diretiva-switch.comp
     FormsModule,
     DiretivaIfComponent,
     DiretivaSwitchComponent,
+    DiretivaForComponent,
+    CliEstruturaComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
