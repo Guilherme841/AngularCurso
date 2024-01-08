@@ -1,4 +1,4 @@
-<p>Estilos aplicados com style binding:</p>
+<p>Estilos aplicados com property binding (style binding):</p>
 <button
   [style.background]="buttonOn ? 'lightskyblue' : 'lightblue'"
   [style.border]="'none'"
@@ -10,3 +10,8 @@
 >
   BOTÃO
 </button>
+
+<span>
+  <h3>font-size:</h3>
+  <input type="text" [(ngModel)]="fontSize">
+</span>
