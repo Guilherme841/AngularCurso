@@ -7,6 +7,7 @@ import { DiretivaSwitchComponent } from '../diretivas-estruturais/diretiva-switc
 import { DiretivaForComponent } from '../diretivas-estruturais/diretiva-for/diretiva-for.component';
 import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component';
 import { DiretivaClassComponent } from '../diretivas-atributivas/diretiva-class/diretiva-class.component';
+import { DiretivaStyleComponent } from '../diretivas-atributivas/diretiva-style/diretiva-style.component';
 
 @Component({
   selector: 'app-main',
@@ -19,6 +20,7 @@ import { DiretivaClassComponent } from '../diretivas-atributivas/diretiva-class/
     DiretivaForComponent,
     CliEstruturaComponent,
     DiretivaClassComponent,
+    DiretivaStyleComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
