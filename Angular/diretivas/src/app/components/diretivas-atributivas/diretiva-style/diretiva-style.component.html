@@ -1,10 +1,12 @@
 <p>Estilos aplicados com style binding:</p>
 <button
-  [style.background]="'lightskyblue'"
+  [style.background]="buttonOn ? 'lightskyblue' : 'lightblue'"
   [style.border]="'none'"
   [style.border-radius]="'10px'"
   [style.color]="'white'"
   [style.padding]="'12px'"
+  [style.font-size]="fontSize + 'em'"
+  (click)="buttonOn = !buttonOn"
 >
   BOTÃO
 </button>
