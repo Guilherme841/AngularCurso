@@ -10,8 +10,21 @@
 >
   BOTÃO
 </button>
-
 <span>
   <h3>font-size:</h3>
-  <input type="text" [(ngModel)]="fontSize">
+  <input type="text" [(ngModel)]="fontSize" />
 </span>
+<p>Estilos aplicados com a diretiva ngStyle:</p>
+<button
+  [ngStyle]="{
+    'background-color': buttonOn ? 'lightskyblue' : 'lightblue',
+    border: 'none',
+    'border-radius': '10px',
+    color: 'white',
+    padding: '12px',
+    fontSize: fontSize + 'em'
+  }"
+  (click)="buttonOn = !buttonOn"
+>
+  BOTÃO
+</button>
