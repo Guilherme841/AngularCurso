@@ -1,12 +1,14 @@
+<p>Posso passar componente como conteúdo também.</p>
 <div class="card" style="width: 18rem">
-  <img
+  <ng-content select=".img"></ng-content>
+  <!-- <img
     src="../../../assets/images-png/nasa.png"
     class="card-img-top"
     alt="imagem png do logo da Nasa"
-  />
+  /> -->
   <div class="card-body">
     <p class="card-text">
-      <ng-content></ng-content>
+      <ng-content select=".legenda"></ng-content>
     </p>
   </div>
 </div>

@@ -72,7 +72,20 @@
         </button>
       </div>
       <div>
-        <app-ng-content></app-ng-content>
+        <app-ng-content>
+          <!-- Posso passar componente como conteúdo também. -->
+          <span class="img">
+            <img
+              src="../../../assets/images-png/nasa.png"
+              class="card-img-top"
+              alt="imagem png do logo da Nasa"
+            />
+          </span>
+          <span class="legenda">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </span>
+        </app-ng-content>
       </div>
     </article>
   </section>
