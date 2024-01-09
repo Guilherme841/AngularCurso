@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 
+interface Pessoa {
+  name: string;
+  age: number;
+  address: {
+    street: string;
+    number: number;
+  };
+}
+
 @Component({
   selector: 'app-operador-elvis',
   standalone: true,
@@ -8,7 +17,9 @@ import { Component } from '@angular/core';
   styleUrl: './operador-elvis.component.scss',
 })
 export class OperadorElvisComponent {
-  pessoa: object = {
+  constructor() {}
+  // pessoa2: { name2: string; age2: number } = { name2: 'ciclano', age2: 20 };
+  pessoa: Pessoa = {
     name: 'Fulano',
     age: 20,
     address: {
