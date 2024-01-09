@@ -1,3 +1,4 @@
+import { OperadorElvisComponent } from './../operador-elvis/operador-elvis.component';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,6 +22,7 @@ import { DiretivaStyleComponent } from '../diretivas-atributivas/diretiva-style/
     CliEstruturaComponent,
     DiretivaClassComponent,
     DiretivaStyleComponent,
+    OperadorElvisComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
