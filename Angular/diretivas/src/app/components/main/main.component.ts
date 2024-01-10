@@ -10,6 +10,7 @@ import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component'
 import { DiretivaClassComponent } from '../diretivas-atributivas/diretiva-class/diretiva-class.component';
 import { DiretivaStyleComponent } from '../diretivas-atributivas/diretiva-style/diretiva-style.component';
 import { NgContentComponent } from '../ng-content/ng-content.component';
+import { DiretivasCustomizadasComponent } from '../diretivas-customizadas/diretivas-customizadas.component';
 
 @Component({
   selector: 'app-main',
@@ -25,6 +26,7 @@ import { NgContentComponent } from '../ng-content/ng-content.component';
     DiretivaStyleComponent,
     OperadorElvisComponent,
     NgContentComponent,
+    DiretivasCustomizadasComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
