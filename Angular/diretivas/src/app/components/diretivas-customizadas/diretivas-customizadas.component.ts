@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ColorBlueDirective } from '../../diretivas/color-blue.directive';
-
+// Necessário importar a diretiva.
 @Component({
   selector: 'app-diretivas-customizadas',
   standalone: true,
