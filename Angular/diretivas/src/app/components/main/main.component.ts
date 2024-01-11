@@ -45,5 +45,5 @@ export class MainComponent {
     fatherArticle?.classList.toggle('showed-article');
     buttonClicked.textContent =
       buttonClicked.textContent === 'LESS' ? 'MORE' : 'LESS';
-  }
+  } 
 }
