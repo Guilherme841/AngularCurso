@@ -9,5 +9,5 @@ import { ColorBlueDirective } from '../../diretivas/color-blue.directive';
   styleUrl: './diretivas-customizadas.component.scss',
 })
 export class DiretivasCustomizadasComponent {
-  
+
 }
