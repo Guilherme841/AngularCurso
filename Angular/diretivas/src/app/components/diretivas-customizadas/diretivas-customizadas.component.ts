@@ -8,4 +8,6 @@ import { ColorBlueDirective } from '../../diretivas/color-blue.directive';
   templateUrl: './diretivas-customizadas.component.html',
   styleUrl: './diretivas-customizadas.component.scss',
 })
-export class DiretivasCustomizadasComponent {}
+export class DiretivasCustomizadasComponent {
+  
+}
