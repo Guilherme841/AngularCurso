@@ -9,5 +9,5 @@ export class ColorBlueDirective {
   constructor(private _elementRef: ElementRef, private _renderer2: Renderer2) {
     // Melhor pratica:
     this._renderer2.setStyle(this._elementRef.nativeElement, 'color', 'blue');
-  }
+  } 
 }

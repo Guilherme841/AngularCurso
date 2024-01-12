@@ -1,1 +1,23 @@
+<p>"ng g d ['diretiva']" cria uma diretiva.</p>
+<p>Color modificado com elementRef e Renderer2</p>
 <p appColorBlue>Color Blue!</p>
+<!--  -->
+<p>
+  Hover na div, feito com hostListener de evento e hostBinding de propriedade e
+  classe...
+</p>
+<p>
+  O metadado '"arroba"hostlistener' escuta um <mark>evento</mark> a partir do
+  <mark> hospedeiro da diretiva </mark> "appHoverMouse" por exemplo.
+</p>
+<p>
+  O metadado '"arroba"hostbinding' associa uma <mark>propriedade</mark> do
+  hospedeiro da diretiva "appHoverMouse", nessa caso associa a propriedade
+  "style.background" e cria uma <mark>variável</mark> que vai receber o
+  <mark>valor dessa propriedade. Pode receber métodos.</mark>
+</p>
+<div class="hover-div" appHoverMouse></div>
+<!--  -->
+<p>Highlight com cores customizadas</p>
+<div class="highlight" appHighlight></div>
+<input type="color" [(ngModel)]="backgroundColor" />

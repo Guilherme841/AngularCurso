@@ -12,7 +12,6 @@
       </div>
       <div>
         <app-cli-estrutura></app-cli-estrutura>
-        
       </div>
     </article>
     <article class="diretivas-estruturais article-aula">
@@ -26,7 +25,14 @@
         </button>
       </div>
       <div>
+        <h3>
+          Diretivas Estruturais são usadas para
+          <mark>modificar a estrutura</mark> do DOM, como toggles de hidden e
+          condicionais "if", ela alteram a estrutura do DOM,
+          <mark>não a aparência</mark> do elemento.
+        </h3>
         <p>Diretivas usam o prefixo "*ng".</p>
+        <p>Exemplos a seguir:</p>
         <app-diretiva-if></app-diretiva-if>
         <app-diretiva-switch></app-diretiva-switch>
         <app-diretiva-for></app-diretiva-for>
@@ -43,7 +49,13 @@
         </button>
       </div>
       <div>
+        <h3>
+          Diretivas de Atributo são usadas <mark>para alterar</mark> a aparência
+          de um elemento, adicionar um <mark>comportamento</mark>. Um exemplo
+          seria fazer uma validação de <mark>valor do input.</mark>
+        </h3>
         <p>Diretivas usam o prefixo "*ng".</p>
+        <p>Exemplos a seguir:</p>
         <app-diretiva-class></app-diretiva-class>
         <app-diretiva-style></app-diretiva-style>
       </div>
@@ -91,7 +103,7 @@
     </article>
     <article class="diretivas article-aula">
       <div class="container-aula">
-        <h1>DIRETIVA</h1>
+        <h1>DIRETIVAS CUSTOMIZADAS</h1>
         <button
           class="btn btn-secondary btn-sm"
           (click)="showedArticle($event)"
