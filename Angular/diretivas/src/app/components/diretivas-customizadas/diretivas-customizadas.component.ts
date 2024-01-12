@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { ColorBlueDirective } from '../../diretivas/color-blue.directive';
 import { HoverMouseDirective } from '../../diretivas/hover-mouse.directive';
@@ -19,9 +19,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './diretivas-customizadas.component.scss',
 })
 export class DiretivasCustomizadasComponent {
-  @Input() backgroundColor!: string;
   constructor() {}
-  colorChange() {
-    console.log(this.backgroundColor);
-  }
 }
