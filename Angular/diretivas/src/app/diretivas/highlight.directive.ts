@@ -21,11 +21,12 @@ export class HighlightDirective implements OnChanges, OnInit {
     this.backgroundColor = this.highlightColor;
   }
   @HostListener('mouseout') outMouse() {
+    // console.log(this.inputColor)
     this.backgroundColor = this.inputColor ?? 'black';
   }
   @HostBinding('style.background') backgroundColor!: string;
   ngOnInit() {
-    this.backgroundColor = 'black';
+    return
   }
   ngOnChanges(changes: SimpleChanges) {
     if (changes['inputColor']) {

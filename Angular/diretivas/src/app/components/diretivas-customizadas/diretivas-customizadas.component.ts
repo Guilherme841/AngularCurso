@@ -19,6 +19,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './diretivas-customizadas.component.scss',
 })
 export class DiretivasCustomizadasComponent {
-  backgroundColor!: string;
+  backgroundColor: string = '#000000';
   constructor() {}
 }

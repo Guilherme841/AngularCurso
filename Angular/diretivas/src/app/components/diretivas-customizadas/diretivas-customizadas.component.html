@@ -19,6 +19,7 @@
 <div class="hover-div" appHoverMouse></div>
 <!--  -->
 <p>Highlight com cores customizadas</p>
-<input type="color" [(ngModel)]="backgroundColor" />
-<div class="highlight" appHighlight [inputColor]="backgroundColor"></div>
-
+<div style="display: flex;">
+  <div class="highlight" appHighlight [inputColor]="backgroundColor"></div>
+  <input type="color" [(ngModel)]="backgroundColor" />
+</div>
