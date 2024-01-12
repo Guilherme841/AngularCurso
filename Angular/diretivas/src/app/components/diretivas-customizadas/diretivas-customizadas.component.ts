@@ -9,10 +9,19 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-diretivas-customizadas',
   standalone: true,
-  imports: [ColorBlueDirective,HoverMouseDirective,HighlightDirective,FormsModule],
+  imports: [
+    ColorBlueDirective,
+    HoverMouseDirective,
+    HighlightDirective,
+    FormsModule,
+  ],
   templateUrl: './diretivas-customizadas.component.html',
   styleUrl: './diretivas-customizadas.component.scss',
 })
 export class DiretivasCustomizadasComponent {
   @Input() backgroundColor!: string;
+  constructor() {}
+  colorChange() {
+    console.log(this.backgroundColor);
+  }
 }
