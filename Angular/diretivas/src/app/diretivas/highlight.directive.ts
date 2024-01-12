@@ -1,13 +1,14 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
   standalone: true,
 })
-export class HighlightDirective {
+export class HighlightDirective implements OnChanges,OnInit {
   constructor() {}
-  defaultColor: string = 'rgb(255, 255, 172)';
-  highlightColor: string = 'lightcoral';
+  @Input() defaultColor: string = 'rgb(255, 255, 172)';
+  @Input() highlightColor: string = 'lightcoral';
+  @Input() inputColor!: string;
   @HostListener('mouseenter') onMouse() {
     this.backgroundColor = this.highlightColor;
   }
@@ -15,4 +16,13 @@ export class HighlightDirective {
     this.backgroundColor = this.defaultColor;
   }
   @HostBinding('style.background') backgroundColor!: string;
+  ngOnInit() {
+    console.log(this.inputColor)
+    this.backgroundColor = this.inputColor;
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['inputColor']) {
+      this.backgroundColor = this.inputColor;
+    }
+  }
 }
