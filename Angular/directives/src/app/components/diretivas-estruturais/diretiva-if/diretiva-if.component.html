@@ -33,9 +33,14 @@
   <p>ngIf com ngTemplate.</p>
 </ng-template>
 <div>********************************</div>
-<p *appElse="isTrueToggle">Else feito com Input-Property com diretiva estrutural, sintaxe: "*appElse"</p>
+<p *appElse="isTrueToggle">
+  Else feito com Input-Property com diretiva estrutural, sintaxe: "*appElse"
+</p>
 <ng-template [appElse]="isTrueToggle">
-  <p>Else feito com Input-Property com diretiva estrutural, sintaxe: "ng-template 'appElse'='variável'"</p>
+  <p>
+    Else feito com Input-Property com diretiva estrutural, sintaxe: "ng-template
+    'appElse'='variável'"
+  </p>
 </ng-template>
 <div>********************************</div>
 <button class="btn btn-primary" (click)="isTrueToggle = !isTrueToggle">

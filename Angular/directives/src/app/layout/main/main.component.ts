@@ -1,4 +1,3 @@
-import { OperadorElvisComponent } from '../../components/operador-elvis/operador-elvis.component';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +10,7 @@ import { DiretivaClassComponent } from '../../components/diretivas-atributivas/d
 import { DiretivaStyleComponent } from '../../components/diretivas-atributivas/diretiva-style/diretiva-style.component';
 import { NgContentComponent } from '../../components/ng-content/ng-content.component';
 import { DiretivasCustomizadasComponent } from '../../components/diretivas-customizadas/diretivas-customizadas.component';
+import { OperadorElvisComponent } from '../../components/operador-elvis/operador-elvis.component';
 
 @Component({
   selector: 'app-main',
