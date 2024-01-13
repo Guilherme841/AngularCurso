@@ -7,12 +7,15 @@
   <mark>alertas</mark> simples(árvores pequenas). ngIf se sai melhor com
   <mark>árvores grandes.</mark>
 </p>
-<p>Diretiva If.</p>
+<div>********************************</div>
+<p>Diretiva If escrita com else sintaxe antiga:</p>
 <p *ngIf="isTrueToggle; else emptyUser">Contem Usuários!</p>
 <ng-template #emptyUser>
   <p [style.font-size]="'1.5em'">Sem Users!</p>
   <!-- Variável local pra fazer o else e ng content pra fazer o toggle -->
 </ng-template>
+<div>********************************</div>
+<p>Escrita com a nova sintaxe de if e else:</p>
 <!-- Nova forma de escrita: @if () {} @else {} -->
 <!-- Nova sintaxe: -->
 @if (isTrueToggle) {
@@ -20,13 +23,21 @@
 } @else {
 <p>Boolean False!</p>
 }
+<div>********************************</div>
 <!-- Oque o "*" da diretiva faz: -->
 <!-- "*" é uma questão de sintaxe, mais facilitado usando ela. -->
 <!-- Sem o "*" posso usar property bind em alguma diretivas, "preciso" usar elas em uma tag ng-template. -->
+<p>Sintaxe usando ng-content e "ngIf" property binding</p>
 <ng-template [ngIf]="isTrueToggle">
+  <!-- Quando o parâmetro é true oque tem aqui dentro do ng-template é mostrado  -->
   <p>ngIf com ngTemplate.</p>
 </ng-template>
-
+<div>********************************</div>
+<p *appElse="isTrueToggle">Else feito com Input-Property com diretiva estrutural, sintaxe: "*appElse"</p>
+<ng-template [appElse]="isTrueToggle">
+  <p>Else feito com Input-Property com diretiva estrutural, sintaxe: "ng-template 'appElse'='variável'"</p>
+</ng-template>
+<div>********************************</div>
 <button class="btn btn-primary" (click)="isTrueToggle = !isTrueToggle">
   Boolean Toggle!
 </button>

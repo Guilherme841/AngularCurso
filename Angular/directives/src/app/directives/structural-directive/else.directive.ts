@@ -1,11 +1,20 @@
-import { Directive } from '@angular/core';
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   selector: '[appElse]',
-  standalone: true
+  standalone: true,
 })
 export class ElseDirective {
-
-  constructor() { }
-
+  // Método set do typescript
+  @Input() set appElse(condition: boolean) {
+    if (!condition) {
+      this._ViewContainerRef.createEmbeddedView(this._TemplateRef)
+    } else {
+      this._ViewContainerRef.clear();
+    }
+  }
+  constructor(
+    private _TemplateRef: TemplateRef<any>,
+    private _ViewContainerRef: ViewContainerRef
+  ) {}
 }
