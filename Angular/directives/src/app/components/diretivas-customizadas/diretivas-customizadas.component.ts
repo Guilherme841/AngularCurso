@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import { ColorBlueDirective } from '../../directives/color-blue.directive';
-import { HoverMouseDirective } from '../../directives/hover-mouse.directive';
-import { HighlightDirective } from '../../directives/highlight.directive';
+import { ColorBlueDirective } from '../../directives/attribute-directive/color-blue.directive';
+import { HoverMouseDirective } from '../../directives/attribute-directive/hover-mouse.directive';
+import { HighlightDirective } from '../../directives/attribute-directive/highlight.directive';
 import { FormsModule } from '@angular/forms';
 
 // Necessário importar a diretiva.
