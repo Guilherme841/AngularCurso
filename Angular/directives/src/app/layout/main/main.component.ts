@@ -1,16 +1,16 @@
-import { OperadorElvisComponent } from './../operador-elvis/operador-elvis.component';
+import { OperadorElvisComponent } from '../../components/operador-elvis/operador-elvis.component';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DiretivaIfComponent } from '../diretivas-estruturais/diretiva-if/diretiva-if.component';
-import { DiretivaSwitchComponent } from '../diretivas-estruturais/diretiva-switch/diretiva-switch.component';
-import { DiretivaForComponent } from '../diretivas-estruturais/diretiva-for/diretiva-for.component';
-import { CliEstruturaComponent } from '../cli-estrutura/cli-estrutura.component';
-import { DiretivaClassComponent } from '../diretivas-atributivas/diretiva-class/diretiva-class.component';
-import { DiretivaStyleComponent } from '../diretivas-atributivas/diretiva-style/diretiva-style.component';
-import { NgContentComponent } from '../ng-content/ng-content.component';
-import { DiretivasCustomizadasComponent } from '../diretivas-customizadas/diretivas-customizadas.component';
+import { DiretivaIfComponent } from '../../components/diretivas-estruturais/diretiva-if/diretiva-if.component';
+import { DiretivaSwitchComponent } from '../../components/diretivas-estruturais/diretiva-switch/diretiva-switch.component';
+import { DiretivaForComponent } from '../../components/diretivas-estruturais/diretiva-for/diretiva-for.component';
+import { CliEstruturaComponent } from '../../components/cli-estrutura/cli-estrutura.component';
+import { DiretivaClassComponent } from '../../components/diretivas-atributivas/diretiva-class/diretiva-class.component';
+import { DiretivaStyleComponent } from '../../components/diretivas-atributivas/diretiva-style/diretiva-style.component';
+import { NgContentComponent } from '../../components/ng-content/ng-content.component';
+import { DiretivasCustomizadasComponent } from '../../components/diretivas-customizadas/diretivas-customizadas.component';
 
 @Component({
   selector: 'app-main',
