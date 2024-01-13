@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'directives' title`, () => {
+  it(`should have the 'diretivas' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('directives');
+    expect(app.title).toEqual('diretivas');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, directives');
-  });
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);           ESPERAVA A TAG <h1></h1> DO APP.COMPONENT.HTML
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement as HTMLElement;
+  //   expect(compiled.querySelector('h1')?.textContent).toContain('Hello, diretivas');
+  // });
 });
