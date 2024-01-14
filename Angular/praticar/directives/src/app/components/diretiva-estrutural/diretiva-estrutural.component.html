@@ -1,0 +1,58 @@
+<h1>DIRETIVAS ESTRUTURAL (IF E ELSE DUAS SINTAXES)!</h1>
+<div class="box">
+  <div class="container">
+    <p *ngIf="toggleBoolean; else templateDefault">Conteúdo Visível!</p>
+    <ng-template #templateDefault>
+      <p>Conteúdo Default!</p>
+    </ng-template>
+  </div>
+  <button
+    class="btn btn-success"
+    (click)="toggleBoolean = !toggleBoolean"
+    [innerHTML]="
+      toggleBoolean ? 'Mostrar Conteúdo Default!' : 'Mostrar Conteúdo!'
+    "
+  >
+    Mostrar conteúdo!
+  </button>
+</div>
+<!-- SINTAXE NOVA NO IF E ELSE -->
+<div class="box">
+  <div class="container">
+    @if (toggleBoolean) {
+    <p>Conteúdo Visível!</p>
+    } @else {
+    <p>Conteúdo Default!</p>
+    }
+  </div>
+  <button
+    class="btn bg-warning"
+    (click)="toggleBoolean = !toggleBoolean"
+    [innerHTML]="
+      toggleBoolean ? 'Mostrar Conteúdo Default!' : 'Mostrar Conteúdo!'
+    "
+  >
+    Mostrar conteúdo!
+  </button>
+</div>
+<h2 style="text-align: center; border-bottom: 3px solid gray">
+  CONTEÚDO ENCERRADO!
+</h2>
+<h1>DIRETIVA NG FOR (LOOP)!</h1>
+<div class="box">
+  <div class="container">
+    <div class="container-users" *ngFor="let user of arrayUsers; let i = index">
+      {{ i + 1 + "-" + user }}
+    </div>
+  </div>
+  <button
+    class="btn btn-danger"
+    (click)="arrayUsers = ['Fulano!', 'Ciclano!', 'Tirano!']"
+  >
+    Carregar Users!
+  </button>
+</div>
+<h2 style="text-align: center; border-bottom: 3px solid gray">
+  CONTEÚDO ENCERRADO!
+</h2>
+<h1></h1>
