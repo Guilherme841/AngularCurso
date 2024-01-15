@@ -1,0 +1,10 @@
+<h1>DIRETIVA DE ATRIBUTO!</h1>
+<button
+  class="btn"
+  (click)="toggleBoolean = !toggleBoolean"
+  [ngClass]="{ clicado: toggleBoolean }"
+  [ngStyle]="{ background: toggleBoolean ? 'lightgreen' : 'lightgray' }"
+  [innerHTML]="toggleBoolean ? 'Estilo Aplicado!' : 'Aplicar Estilo!'"
+>
+  Aplicar Estilo!
+</button>

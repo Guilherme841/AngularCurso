@@ -10,5 +10,10 @@ import { Component } from '@angular/core';
 })
 export class DiretivaEstruturalComponent {
   toggleBoolean: boolean = false;
-  arrayUsers: Array<string> = [];
+  isLoadUsers: boolean = false;
+  arrayUsers!: Array<string>;
+  loadUsers() {
+    this.arrayUsers = ['Fulano', 'Ciclano', 'Tirano'];
+    this.isLoadUsers = !this.isLoadUsers;
+  }
 }
