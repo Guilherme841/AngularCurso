@@ -11,8 +11,12 @@
   </button>
 </div>
 <div class="box">
-  <input type="text" [(ngModel)]="nomeInput">
-  <button class="btn btn-dark">Enviar Nome!</button>
+  <div>Seu texto: {{ textoInput }}</div>
+  <input type="text" [(ngModel)]="textoInput" />
+  <button class="btn btn-dark" (click)="sendText()">Enviar Nome!</button>
+</div>
+<div class="box">
+
 </div>
 <h2 style="text-align: center; border-bottom: 3px solid gray">
   Conteúdo Encerrado!

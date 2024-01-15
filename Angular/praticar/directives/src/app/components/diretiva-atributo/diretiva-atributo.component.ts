@@ -11,5 +11,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class DiretivaAtributoComponent {
   toggleBoolean: boolean = false;
-  nomeInput!: string;
+  textoInput!: string;
+  sendText() {
+    alert('Texto Enviado Com Sucesso!');
+  }
 }
