@@ -4,6 +4,8 @@ import { DiretivaEstruturalComponent } from '../../components/diretiva-estrutura
 import { DiretivaAtributoComponent } from '../../components/diretiva-atributo/diretiva-atributo.component';
 import { NgContentComponent } from '../../components/ng-content/ng-content.component';
 import { OutputPropertyComponent } from '../../components/output-property/output-property.component';
+import { CycleComponentComponent } from '../../components/cycle-component/cycle-component.component';
+
 
 @Component({
   selector: 'app-main',
@@ -13,6 +15,7 @@ import { OutputPropertyComponent } from '../../components/output-property/output
     DiretivaAtributoComponent,
     NgContentComponent,
     OutputPropertyComponent,
+    CycleComponentComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
