@@ -18,5 +18,7 @@ import { OutputPropertyComponent } from '../../components/output-property/output
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
-
+  items() {
+    
+  }
 }
