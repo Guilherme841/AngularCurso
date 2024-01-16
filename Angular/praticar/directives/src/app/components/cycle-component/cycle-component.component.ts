@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, DestroyRef, OnDestroy, inject } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
 
 @Component({
   selector: 'app-cycle-component',
@@ -8,18 +15,19 @@ import { Component, DestroyRef, OnDestroy, inject } from '@angular/core';
   templateUrl: './cycle-component.component.html',
   styleUrl: './cycle-component.component.scss',
 })
-export class CycleComponentComponent implements OnDestroy {
+export class CycleComponentComponent
+  implements OnDestroy, OnInit, AfterViewInit
+{
   toggleBoolean: boolean = true;
+  @ViewChild('para', { static: true }) paragrafo!: ElementRef;
 
-  ngOnDestroy(): void {
-    console.log('Componente Destruído!');
+  ngOnInit(): void {
+    console.log('Componente Cycle Carregado!');
   }
-  count = 0;
-  constructor() {
-    // Start a timer to increment the counter every second.
-    const id = setInterval(() => this.count++, 5000);
-    // Stop the timer when the component is destroyed.
-    const destroyRef = inject(DestroyRef);
-    destroyRef.onDestroy(() => clearInterval(id));
+  ngAfterViewInit(): void {
+    console.log(this.paragrafo);
+  }
+  ngOnDestroy(): void {
+    console.log('NgDestroy Executado!');
   }
 }

@@ -10,5 +10,6 @@
     </h3>
   </app-ng-content>
   <app-output-property (receiveValue)="items($event)" [items]="pedirItems"></app-output-property>
-  <app-cycle-component></app-cycle-component>
+  <app-cycle-component *ngIf="toggleBoolean"></app-cycle-component>
+  <button class="btn btn-warning" (click)="toggleBoolean = !toggleBoolean">Deletar Componente!</button>
 </main>

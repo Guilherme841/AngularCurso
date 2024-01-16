@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { DiretivaEstruturalComponent } from '../../components/diretiva-estrutural/diretiva-estrutural.component';
 import { DiretivaAtributoComponent } from '../../components/diretiva-atributo/diretiva-atributo.component';
@@ -15,12 +16,14 @@ import { CycleComponentComponent } from '../../components/cycle-component/cycle-
     DiretivaAtributoComponent,
     NgContentComponent,
     OutputPropertyComponent,
-    CycleComponentComponent
+    CycleComponentComponent,
+    CommonModule
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
+  toggleBoolean: boolean = true;
   pedirItems: Array<string> = [];
   items(event: string) {
     this.pedirItems.push(event);
