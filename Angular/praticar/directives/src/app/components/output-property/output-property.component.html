@@ -1,6 +1,6 @@
 <h1 style="text-align: center">OUTPUT PROPERTY!</h1>
 <div class="box">
-  <div>Pedidos Recebidos: {{ items }} </div>
+  <div>Pedidos Recebidos: {{ items | json }}</div>
   <input type="text" #inputValue />
   <button class="btn btn-success" (click)="sendValue(inputValue.value)">
     OUTPUT!

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { DiretivaEstruturalComponent } from '../../components/diretiva-estrutural/diretiva-estrutural.component';
 import { DiretivaAtributoComponent } from '../../components/diretiva-atributo/diretiva-atributo.component';
@@ -20,6 +20,6 @@ import { OutputPropertyComponent } from '../../components/output-property/output
 export class MainComponent {
   pedirItems: Array<string> = [];
   items(event: string) {
-    this.pedirItems.push(event)
+    this.pedirItems.push(event);
   }
 }
