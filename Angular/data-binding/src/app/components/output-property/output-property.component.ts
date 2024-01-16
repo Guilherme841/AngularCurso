@@ -22,7 +22,7 @@ export class OutputPropertyComponent {
   @Output() valueChanged: any = new EventEmitter();
   @ViewChild('fieldInput', { static: false }) inputFieldValue!: ElementRef;
   constructor(private renderer: Renderer2) {}
-  incremeto() {
+  incremento() {
     // console.log(this.inputFieldValue.nativeElement)
     if (this.inputFieldValue.nativeElement.value >= 10) {
       alert('Maior que 10!');

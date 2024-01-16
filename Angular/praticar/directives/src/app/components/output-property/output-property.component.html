@@ -1,0 +1,13 @@
+<h1 style="text-align: center">OUTPUT PROPERTY!</h1>
+<div class="box">
+  <span>Pedidos Recebidos: {{ items }} </span>
+  <input type="text" readonly #inputValue />
+  <button class="btn btn-success" (click)="sendValue(inputValue.value)">
+    OUTPUT!
+  </button>
+</div>
+<h2 style="text-align: center; border-bottom: 3px solid gray">
+  CONTEÚDO ENCERRADO!
+</h2>
+<p>Data: {{ data }}</p>
+<p>Valor do input: {{ inputValue }}</p>
