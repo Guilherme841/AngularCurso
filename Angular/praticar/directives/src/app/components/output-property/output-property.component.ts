@@ -11,15 +11,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class OutputPropertyComponent {
   @Input() items: Array<string> = [];
   @Output() receiveValue: any = new EventEmitter();
-  getDate(): string {
-    let data = new Date();
-    let dia = data.getDate();
-    let mes = data.getMonth() + 1;
-    let ano = data.getFullYear();
-    return [dia, mes, ano].join('/');
-  }
-  data: string = this.getDate();
+
   sendValue(value: string) {
     this.receiveValue.emit(value);
+    console.log(this.items);
   }
 }

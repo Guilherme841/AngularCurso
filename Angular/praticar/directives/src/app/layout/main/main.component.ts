@@ -18,7 +18,8 @@ import { OutputPropertyComponent } from '../../components/output-property/output
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
-  items() {
-    
+  pedirItems: Array<string> = [];
+  items(event: string) {
+    this.pedirItems.push(event)
   }
 }
