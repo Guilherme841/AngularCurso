@@ -26,9 +26,11 @@ export class CycleComponentComponent
   // @ViewChild('inputValue', { static: true }) input!: ElementRef;
   @Input() valorInput!: string;
   firstOnChange: boolean = true;
-
+  mes!: number;
   ngOnInit(): void {
     console.log('Componente Cycle Carregado!');
+    let data = new Date();
+    this.mes = data.getMonth();
   }
   ngAfterViewInit(): void {
     // console.log(this.input);
