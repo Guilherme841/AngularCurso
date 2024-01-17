@@ -25,6 +25,7 @@ export class CycleComponentComponent
   toggleBoolean: boolean = true;
   // @ViewChild('inputValue', { static: true }) input!: ElementRef;
   @Input() valorInput!: string;
+  firstOnChange: boolean = true;
 
   ngOnInit(): void {
     console.log('Componente Cycle Carregado!');
@@ -36,8 +37,10 @@ export class CycleComponentComponent
     console.log('NgDestroy Executado!');
   }
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['valorInput']) {
+    if (changes['valorInput'] && this.firstOnChange === false) {
       console.log('Input Mudou o Valor!', this.valorInput);
+    } else {
+      this.firstOnChange = false;
     }
   }
 }
