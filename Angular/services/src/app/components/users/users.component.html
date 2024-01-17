@@ -1,0 +1,6 @@
+<h5>Lista De Usuários!</h5>
+<ul>
+  @for (user of listUsers; track $index) {
+    <ul>{{ $index + '-' + user }}</ul>
+  }
+</ul>
