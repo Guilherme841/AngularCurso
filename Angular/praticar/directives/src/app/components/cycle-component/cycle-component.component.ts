@@ -22,14 +22,14 @@ import { FormsModule } from '@angular/forms';
 export class CycleComponentComponent
   implements OnDestroy, OnInit, AfterViewInit, OnChanges
 {
-  toggleBoolean: boolean = true;
+  toggleBoolean = true;
   // @ViewChild('inputValue', { static: true }) input!: ElementRef;
   @Input() valorInput!: string;
-  firstOnChange: boolean = true;
+  firstOnChange = true;
   mes!: number;
   ngOnInit(): void {
     console.log('Componente Cycle Carregado!');
-    let data = new Date();
+    const data = new Date();
     this.mes = data.getMonth();
   }
   ngAfterViewInit(): void {
