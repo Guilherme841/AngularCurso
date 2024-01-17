@@ -1,6 +1,10 @@
-<h5>Lista De Usuários!</h5>
-<ul>
-  @for (user of listUsers; track $index) {
-    <ul>{{ $index + '-' + user }}</ul>
-  }
-</ul>
+<div class="box">
+  <h3 style="text-align: center; border-bottom: 1px dashed lightgray;">Lista feita recebendo dados de um serviço!</h3>
+  <h5>Lista De Usuários!</h5>
+  <ul>
+    @for (user of listUsers; track $index) {
+      <ul>{{ $index + '-' + user }}</ul>
+    }
+  </ul>
+</div>
+<div style="width: 100%; border-bottom: 3px solid gray;"></div>
