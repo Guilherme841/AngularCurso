@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { SearchUsersService } from './../../services/search-users.service';
 
@@ -10,8 +10,13 @@ import { SearchUsersService } from './../../services/search-users.service';
   templateUrl: './create-user.component.html',
   styleUrl: './create-user.component.scss',
 })
-export class CreateUserComponent {
-  constructor(private _searchUsersService: SearchUsersService) {
-    console.log(this._searchUsersService.findUsers());
+export class CreateUserComponent implements OnInit {
+  listUsers: Array<string> = [];
+  constructor(private _searchUsersService: SearchUsersService) {}
+  ngOnInit(): void {
+    this.listUsers = this._searchUsersService.findUsers();
+  }
+  createUser(user: string) {
+    this.listUsers.push(user);
   }
 }

@@ -1,4 +1,11 @@
 <div class="box">
-  <h3></h3>
+  <h3>Lista de usuários com serviço reutilizado!</h3>
+  <ul>
+    @for (user of listUsers; track $index) {
+    <li>{{ $index + "-" + user }}</li>
+    }
+  </ul>
+  <input type="text" #inputValue>
+  <button class="btn btn-success" (click)="createUser(inputValue.value)">Criar User!</button>
 </div>
 <div style="width: 100%; border-bottom: 3px solid gray"></div>
