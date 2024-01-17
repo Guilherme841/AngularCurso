@@ -34,7 +34,7 @@ export class CycleComponentComponent
     // console.log(this.input);
   }
   ngOnDestroy(): void {
-    console.log('NgDestroy Executado!');
+    console.log('Componente Destruído!');
   }
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['valorInput'] && this.firstOnChange === false) {
