@@ -7,7 +7,6 @@ import { NgContentComponent } from '../../components/ng-content/ng-content.compo
 import { OutputPropertyComponent } from '../../components/output-property/output-property.component';
 import { CycleComponentComponent } from '../../components/cycle-component/cycle-component.component';
 
-
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -17,12 +16,13 @@ import { CycleComponentComponent } from '../../components/cycle-component/cycle-
     NgContentComponent,
     OutputPropertyComponent,
     CycleComponentComponent,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
 export class MainComponent {
+  valueInput!: string;
   toggleBoolean: boolean = true;
   pedirItems: Array<string> = [];
   items(event: string) {

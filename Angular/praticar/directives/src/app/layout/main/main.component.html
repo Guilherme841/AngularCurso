@@ -9,7 +9,19 @@
       Estou passado esse texto através do componente "MAIN"!
     </h3>
   </app-ng-content>
-  <app-output-property (receiveValue)="items($event)" [items]="pedirItems"></app-output-property>
-  <app-cycle-component *ngIf="toggleBoolean"></app-cycle-component>
-  <button class="btn btn-warning" (click)="toggleBoolean = !toggleBoolean">Deletar Componente!</button>
+  <app-output-property
+    (receiveValue)="items($event)"
+    [items]="pedirItems"
+  ></app-output-property>
+  <app-cycle-component
+    *ngIf="toggleBoolean"
+    [valorInput]="valueInput"
+  ></app-cycle-component>
+  <input type="text" #inputValue />
+  <button class="btn btn-warning" (click)="valueInput = inputValue.value">
+    Send Name!
+  </button>
+  <button class="btn btn-danger" (click)="toggleBoolean = !toggleBoolean">
+    Deletar Componente!
+  </button>
 </main>
