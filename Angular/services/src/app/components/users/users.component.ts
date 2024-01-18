@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 import { SearchUsersService } from '../../services/search-users.service';
 
@@ -12,8 +12,11 @@ import { SearchUsersService } from '../../services/search-users.service';
 })
 export class UsersComponent implements OnInit {
   listUsers: Array<string> = [];
-  constructor(private _SearchUsersService: SearchUsersService) {}
+  constructor(private _searchUsersService: SearchUsersService) {}
   ngOnInit(): void {
-    this.listUsers = this._SearchUsersService.findUsers();
+    this.listUsers = this._searchUsersService.findUsers();
+    SearchUsersService.createUser.subscribe((user) =>
+      this.listUsers.push(user)
+    );
   }
 }

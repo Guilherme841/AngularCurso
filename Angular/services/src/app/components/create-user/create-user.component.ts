@@ -18,5 +18,7 @@ export class CreateUserComponent implements OnInit {
   }
   createUser(user: string) {
     this.listUsers.push(user);
+    this._searchUsersService.serviceEvent.emit(user);
+    SearchUsersService.createUser.emit(user);
   }
 }
