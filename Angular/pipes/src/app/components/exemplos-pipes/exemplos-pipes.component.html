@@ -1,7 +1,7 @@
 <p>Objeto Livro : {{ livro.titulo | lowercase | uppercase }}</p>
 <p>Objeto Livro : {{ livro.rating }}</p>
 <p>Objeto Livro : {{ livro.paginas }}</p>
-<p>Objeto Livro : {{ livro.preco | currency:'BRL' }}</p>
-<p>Objeto Livro : {{ livro.lancamento | date:'dd-MM-yyyy' }}</p>
+<p>Objeto Livro : {{ livro.preco | currency : "BRL" }}</p>
+<p>Objeto Livro : {{ livro.lancamento | date : "dd-MM-yyyy" }}</p>
 <p>Objeto Livro : {{ livro.url }}</p>
 <pre>{{ livro | json }}</pre>

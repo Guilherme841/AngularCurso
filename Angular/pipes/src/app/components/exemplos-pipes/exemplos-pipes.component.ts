@@ -7,19 +7,10 @@ import {
 } from '@angular/common';
 import { Component } from '@angular/core';
 
-interface livro {
-  titulo: string;
-  rating: number;
-  paginas: number;
-  preco: number;
-  lancamento: string;
-  url: string;
-}
-
 @Component({
   selector: 'app-exemplos-pipes',
   standalone: true,
-  imports: [JsonPipe, DatePipe, CurrencyPipe, UpperCasePipe,LowerCasePipe],
+  imports: [JsonPipe, DatePipe, CurrencyPipe, UpperCasePipe, LowerCasePipe],
   templateUrl: './exemplos-pipes.component.html',
   styleUrl: './exemplos-pipes.component.scss',
 })
