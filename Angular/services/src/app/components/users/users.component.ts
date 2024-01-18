@@ -12,7 +12,9 @@ import { SearchUsersService } from '../../services/search-users.service';
 })
 export class UsersComponent implements OnInit {
   listUsers: Array<string> = [];
-  constructor(private _searchUsersService: SearchUsersService) {}
+  constructor(private _searchUsersService: SearchUsersService) {
+    this._searchUsersService.logService.consoleLog('Obtendo Usuários!');
+  }
   ngOnInit(): void {
     this.listUsers = this._searchUsersService.findUsers();
     SearchUsersService.createUser.subscribe((user) =>

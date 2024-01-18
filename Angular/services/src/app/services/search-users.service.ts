@@ -1,4 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { LogService } from './log.service';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ export class SearchUsersService {
   serviceEvent = new EventEmitter();
   static createUser = new EventEmitter();
   private _users: Array<string> = ['User', 'User', 'User', 'User'];
-  constructor() {}
+  constructor(public logService: LogService) {}
   callPushUser(user: string) {
     return user;
   }

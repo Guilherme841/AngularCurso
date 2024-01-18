@@ -17,6 +17,7 @@ export class CreateUserComponent implements OnInit {
     this.listUsers = this._searchUsersService.findUsers();
   }
   createUser(user: string) {
+    this._searchUsersService.logService.consoleLog(`Novo Usuário Criado: ${user}`);
     this.listUsers.push(user);
     this._searchUsersService.serviceEvent.emit(user);
     SearchUsersService.createUser.emit(user);
