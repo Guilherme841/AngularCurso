@@ -1,7 +1,8 @@
 <p>Titulo Livro : {{ livro.titulo | camelCase }}</p>
+<!-- <p>Rating Livro : {{ livro.rating | number:'1.0-1' }}</p> -->
 <p>Rating Livro : {{ livro.rating }}</p>
 <p>Páginas Livro : {{ livro.paginas }}</p>
 <p>Preço Livro : {{ livro.preco | currency : "BRL" }}</p>
-<p>Lançamento Livro : {{ livro.lancamento | date : "dd-MM-yyyy" }}</p>
+<p>Lançamento Livro : {{ livro.lancamento | date }}</p>
 <p>Url Livro : {{ livro.url }}</p>
 <pre>{{ livro | json }}</pre>

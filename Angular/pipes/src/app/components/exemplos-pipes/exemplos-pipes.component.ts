@@ -1,6 +1,7 @@
 import {
   CurrencyPipe,
   DatePipe,
+  DecimalPipe,
   JsonPipe,
   LowerCasePipe,
   UpperCasePipe,
@@ -18,6 +19,7 @@ import { CamelCasePipe } from '../../pipes/camel-case.pipe';
     UpperCasePipe,
     LowerCasePipe,
     CamelCasePipe,
+    DecimalPipe,
   ],
   templateUrl: './exemplos-pipes.component.html',
   styleUrl: './exemplos-pipes.component.scss',
@@ -25,7 +27,7 @@ import { CamelCasePipe } from '../../pipes/camel-case.pipe';
 export class ExemplosPipesComponent {
   livro = {
     titulo: 'não há vagas',
-    rating: 9.5345,
+    rating: 9.1231,
     paginas: 200,
     preco: 39.99,
     lancamento: new Date(),
