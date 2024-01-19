@@ -16,7 +16,9 @@
   </button>
   <ul>
     @for (book of getCourse(); track $index) {
-    <li>Livro: {{ $index + 1 + "-" + book }} </li>
+    <li>Livro: {{ $index + 1 + "-" + book }}</li>
     }
   </ul>
 </div>
+<p>{{ asyncValue | async }}</p>
+<p>{{ asyncValueTwo | async }}</p>

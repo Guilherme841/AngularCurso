@@ -7,7 +7,8 @@ import {
   LowerCasePipe,
   UpperCasePipe,
 } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { interval, map } from 'rxjs';
 
 import { CamelCasePipe } from '../../pipes/camel-case.pipe';
 import { FormsModule } from '@angular/forms';
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './exemplos-pipes.component.html',
   styleUrl: './exemplos-pipes.component.scss',
 })
-export class ExemplosPipesComponent {
+export class ExemplosPipesComponent implements OnInit {
   livro = {
     titulo: 'não há vagas',
     rating: 9.1231,
@@ -58,5 +59,14 @@ export class ExemplosPipesComponent {
       return false;
     });
   }
+  asyncValue = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor Assíncrono!'), 2000);
+  });
   constructor() {}
+  asyncValueTwo = interval(2000).pipe(map((msg) => 'Valor Assíncrono Dois'));
+  ngOnInit() {
+    this.asyncValueTwo.subscribe((msg) => {
+      console.log(msg);
+    });
+  }
 }
