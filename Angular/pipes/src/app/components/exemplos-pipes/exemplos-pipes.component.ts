@@ -7,8 +7,8 @@ import {
   UpperCasePipe,
 } from '@angular/common';
 import { Component } from '@angular/core';
+
 import { CamelCasePipe } from '../../pipes/camel-case.pipe';
-import { FilterArrayPipe } from '../../pipes/filter-array.pipe';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -21,7 +21,6 @@ import { FilterArrayPipe } from '../../pipes/filter-array.pipe';
     LowerCasePipe,
     CamelCasePipe,
     DecimalPipe,
-    FilterArrayPipe
   ],
   templateUrl: './exemplos-pipes.component.html',
   styleUrl: './exemplos-pipes.component.scss',
@@ -36,6 +35,9 @@ export class ExemplosPipesComponent {
     url: 'http://www.livro.com.br',
   };
   listBooks: Array<string> = ['Livro', 'Livro', 'Livro'];
+  addBook(book: string) {
+    this.listBooks.push(book)
+  }
   constructor() {
     // console.log(typeof this.livro);
   }

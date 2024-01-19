@@ -115,8 +115,8 @@ let novoArray = array.map((c) => {
 });
 
 // FILTER
-// NÃO ALTERA VALOR, APENAS PEGA UM PEDAÇO DADO A CONDIÇÂO
-// POSSO JUNTAR METEDOS DE ARRAY
+// NÃO ALTERA VALOR, APENAS PEGA UM PEDAÇO DADO A CONDIÇÃO
+// POSSO JUNTAR MÉTODOS DE ARRAY
 const novoArray2 = array.filter((d) => d % 2 === 0).map((d) => d * 10);
 
 // EVERY
@@ -124,7 +124,7 @@ const novoArray2 = array.filter((d) => d % 2 === 0).map((d) => d * 10);
 const novoArray3 = array.every((e) => typeof e === "number");
 
 // SOME
-// VARIFICA SE UM ITEM SATISFAZ UMA CONDIÇÃO E RETORNA BOOLEAN
+// VERIFICA SE UM ITEM SATISFAZ UMA CONDIÇÃO E RETORNA BOOLEAN
 let novoArray4 = array.some((f) => {
   return typeof f === "number";
 });
@@ -133,13 +133,13 @@ let novoArray4 = array.some((f) => {
 // SERVE PRA ENCONTRAR UM ITEM DO ARRAY, SELECIONA O PRIMEIRO ITEM VERDADEIRO DA CONDIÇÃO
 let novoArray5 = array.find((g) => g % 2 === 0);
 
-// FINDINDEX
-// RETORNA O INDICE DO VALOR SELECIONADO COM A CONDIÇÃO
+// FIND-INDEX
+// RETORNA O ÍNDICE DO VALOR SELECIONADO COM A CONDIÇÃO
 let novoArray6 = array.findIndex((h) => h % 2 === 0);
 
 // REDUCE
-// TRANFORMAR O ARRAY A PARTIR DO MESMO
-// RECEBE UM SEGUNDO PARAMETRO COM VALOR INICIAL DA NOVA ESTRUTURA DE DADOS. exemplo 0, {}, [], CHAMADO DE ACCUMULATOR(ACC)
+// TRANSFORMAR O ARRAY A PARTIR DO MESMO
+// RECEBE UM SEGUNDO PARÂMETRO COM VALOR INICIAL DA NOVA ESTRUTURA DE DADOS. exemplo 0, {}, [], CHAMADO DE ACCUMULATOR(ACC)
 // ESPERA RETORNO DO NOVO VALOR DO ACCUMULATOR(ACC)
 let novoArray7 = array.reduce((acc, i) => {
   return acc + i;

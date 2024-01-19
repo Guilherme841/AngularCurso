@@ -6,4 +6,8 @@
 
 ---
 
-Pipe impuro - Mesmo que o valor recebido pelo pipe é modificado ele continua funcionado continua olhando as mudando feita nesse valor.
+## Pipe impuro - Mesmo que o valor recebido pelo pipe é modificado ele continua funcionado continua olhando as mudando feita nesse valor.
+## (NÃO SE DEVE USAR PIPES PARA FILTRAR ARRAY E NEM ORDER BY )
+
+--- 
+

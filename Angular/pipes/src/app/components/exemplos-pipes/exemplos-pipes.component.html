@@ -7,8 +7,16 @@
 <p>Lançamento Livro : {{ livro.lancamento | date }}</p>
 <p>Url Livro : {{ livro.url }}</p>
 <pre>{{ livro | json }}</pre>
-<ul>
-  @for (book of listBooks; track $index) {
-  <li>Livro: {{ $index + 1 + "-" + book | filterArray }}</li>
-  }
-</ul>
+<h5>Maneira correta de filtrar nos projetos.</h5>
+<div class="box">
+  <input type="text" #inputValue />
+  <input type="text" placeholder="Search Book!">
+  <button class="btn btn-success" (click)="addBook(inputValue.value)">
+    Add book!
+  </button>
+  <ul>
+    @for (book of listBooks; track $index) {
+    <li>Livro: {{ $index + 1 + "-" + book }}</li>
+    }
+  </ul>
+</div>
