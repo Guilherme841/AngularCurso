@@ -1,4 +1,5 @@
 import {
+  CommonModule,
   CurrencyPipe,
   DatePipe,
   DecimalPipe,
@@ -9,6 +10,7 @@ import {
 import { Component } from '@angular/core';
 
 import { CamelCasePipe } from '../../pipes/camel-case.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -21,6 +23,8 @@ import { CamelCasePipe } from '../../pipes/camel-case.pipe';
     LowerCasePipe,
     CamelCasePipe,
     DecimalPipe,
+    FormsModule,
+    CommonModule,
   ],
   templateUrl: './exemplos-pipes.component.html',
   styleUrl: './exemplos-pipes.component.scss',
@@ -35,10 +39,24 @@ export class ExemplosPipesComponent {
     url: 'http://www.livro.com.br',
   };
   listBooks: Array<string> = ['Livro', 'Livro', 'Livro'];
+  searchBook: string = '';
   addBook(book: string) {
-    this.listBooks.push(book)
+    this.listBooks.push(book);
   }
-  constructor() {
-    // console.log(typeof this.livro);
+  getCourse() {
+    if (
+      this.listBooks.length === 0 ||
+      this.searchBook === undefined ||
+      this.searchBook.trim() === ''
+    ) {
+      return this.listBooks;
+    }
+    return this.listBooks.filter((v) => {
+      if (v.toLowerCase().indexOf(this.searchBook.toLowerCase()) >= 0) {
+        return true;
+      }
+      return false;
+    });
   }
+  constructor() {}
 }

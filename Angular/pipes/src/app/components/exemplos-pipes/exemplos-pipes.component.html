@@ -10,13 +10,13 @@
 <h5>Maneira correta de filtrar nos projetos.</h5>
 <div class="box">
   <input type="text" #inputValue />
-  <input type="text" placeholder="Search Book!">
+  <input type="text" placeholder="Search Book!" [(ngModel)]="searchBook" />
   <button class="btn btn-success" (click)="addBook(inputValue.value)">
     Add book!
   </button>
   <ul>
-    @for (book of listBooks; track $index) {
-    <li>Livro: {{ $index + 1 + "-" + book }}</li>
+    @for (book of getCourse(); track $index) {
+    <li>Livro: {{ $index + 1 + "-" + book }} </li>
     }
   </ul>
 </div>
