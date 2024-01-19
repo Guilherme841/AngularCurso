@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import { SearchUsersService } from './search-users.service';
-
 @Injectable({
   providedIn: 'root',
 })
