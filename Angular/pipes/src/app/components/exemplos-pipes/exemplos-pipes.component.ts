@@ -25,9 +25,9 @@ import { CamelCasePipe } from '../../pipes/camel-case.pipe';
 export class ExemplosPipesComponent {
   livro = {
     titulo: 'não há vagas',
-    rating: 9.5,
+    rating: 9.5345,
     paginas: 200,
-    preco: 39.9,
+    preco: 39.99,
     lancamento: new Date(),
     url: 'http://www.livro.com.br',
   };
