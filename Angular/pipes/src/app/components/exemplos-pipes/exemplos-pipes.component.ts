@@ -8,6 +8,7 @@ import {
 } from '@angular/common';
 import { Component } from '@angular/core';
 import { CamelCasePipe } from '../../pipes/camel-case.pipe';
+import { FilterArrayPipe } from '../../pipes/filter-array.pipe';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -20,6 +21,7 @@ import { CamelCasePipe } from '../../pipes/camel-case.pipe';
     LowerCasePipe,
     CamelCasePipe,
     DecimalPipe,
+    FilterArrayPipe
   ],
   templateUrl: './exemplos-pipes.component.html',
   styleUrl: './exemplos-pipes.component.scss',

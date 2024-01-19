@@ -9,6 +9,6 @@
 <pre>{{ livro | json }}</pre>
 <ul>
   @for (book of listBooks; track $index) {
-  <li>Livro: {{ $index + 1 + "-" + book }}</li>
+  <li>Livro: {{ $index + 1 + "-" + book | filterArray }}</li>
   }
 </ul>

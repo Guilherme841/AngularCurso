@@ -1,13 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filterArray',
+  name: 'filterArrayImpuro',
   standalone: true
 })
-export class FilterArrayPipe implements PipeTransform {
+export class FilterArrayImpuroPipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {
-    return value;
+    return null;
   }
 
 }
