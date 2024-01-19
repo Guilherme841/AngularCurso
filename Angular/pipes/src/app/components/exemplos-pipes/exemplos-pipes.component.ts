@@ -33,6 +33,7 @@ export class ExemplosPipesComponent {
     lancamento: new Date(),
     url: 'http://www.livro.com.br',
   };
+  listBooks: Array<string> = ['Livro', 'Livro', 'Livro'];
   constructor() {
     // console.log(typeof this.livro);
   }

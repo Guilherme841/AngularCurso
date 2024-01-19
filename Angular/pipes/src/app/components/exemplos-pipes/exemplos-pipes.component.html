@@ -2,7 +2,13 @@
 <!-- <p>Rating Livro : {{ livro.rating | number:'1.0-1' }}</p> -->
 <p>Rating Livro : {{ livro.rating }}</p>
 <p>Páginas Livro : {{ livro.paginas }}</p>
-<p>Preço Livro : {{ livro.preco | currency : "BRL" }}</p>
+<!-- <p>Preço Livro : {{ livro.preco | currency : "BRL" }}</p> -->
+<p>Preço Livro : {{ livro.preco }}</p>
 <p>Lançamento Livro : {{ livro.lancamento | date }}</p>
 <p>Url Livro : {{ livro.url }}</p>
 <pre>{{ livro | json }}</pre>
+<ul>
+  @for (book of listBooks; track $index) {
+  <li>Livro: {{ $index + 1 + "-" + book }}</li>
+  }
+</ul>

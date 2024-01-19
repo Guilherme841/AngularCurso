@@ -19,9 +19,8 @@ import { FooterComponent } from './layout/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
+
 export class AppComponent {
   title = 'pipes';
-  constructor() {
-
-  }
+  constructor() {}
 }
