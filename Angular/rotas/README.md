@@ -2,4 +2,7 @@
 
 ---
 
-
+## Rotas são compostas de objetos dentro de um array, um key seria o "path: 'caminho do componente'" e o outro o "componente: 'componente'" 
+## Declaro links com ela com a diretiva [ routerLink="['caminho']" na tag "</a>" ] 
+## Declaro as rotas e configs no arquivo "app.routes.ts" e pra usar importo o "RouterModule"
+## tag "</router-outlet>" para ser onde o componente do path deve ser exibido. 
