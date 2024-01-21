@@ -7,7 +7,6 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
-
 export const routes: Routes = [
   {
     path: '',
@@ -18,17 +17,17 @@ export const routes: Routes = [
   //   component: LoginDetalhesComponent,
   // },
   {
-    path: 'profile',
+    path: 'profile/:id',
     component: ProfileComponent,
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
     path: 'login',
     component: LoginComponent,
-  }
+  },
 ];
 
 export const routing: ModuleWithProviders<RouterModule> =

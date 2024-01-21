@@ -8,11 +8,11 @@ export class ProfileService {
     return [
       {
         id: 1,
-        user: 'user',
+        name: 'name',
       },
       {
         id: 2,
-        user: 'user2',
+        name: 'name2',
       },
     ];
   }
