@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { IdService } from '../../services/id.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +10,16 @@ import { RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
-  id: string = 'id';
+export class HeaderComponent implements OnInit, OnDestroy {
+  private eventSubscribe!: Subscription;
+  constructor(private _id: IdService) {}
+  id!: unknown;
+  ngOnInit() {
+    this.eventSubscribe = IdService.sendId.subscribe((id) => {
+      this.id = id;
+    });
+  }
+  ngOnDestroy() {
+    this.eventSubscribe.unsubscribe();
+  }
 }

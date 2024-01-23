@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class IdService {
-
-  constructor() { }
+  static sendId: EventEmitter<any> = new EventEmitter();
+  constructor() {}
+  id!: unknown;
+  getId(idReceived: unknown) {
+    IdService.sendId.emit(idReceived);
+    return (this.id = idReceived);
+  }
 }
