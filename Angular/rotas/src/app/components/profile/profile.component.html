@@ -1,7 +1,0 @@
-<mat-list role="list">
-  @for (user of users; track $index) {
-  <mat-list-item role="listitem">
-    <a [routerLink]="['/profile', user.id]">{{ user.name }}</a>
-  </mat-list-item>
-  }
-</mat-list>

@@ -1,21 +1,27 @@
-## Módulo sobre rota, angular roda spa(single page application), ela não precisar recarregar para exibir um componente, ela apenas mostra os componentes de acordo com a rota que está "/rota/1" e "/rota/2".
+# Rotas
 
----
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
 
-## Rotas são compostas de objetos dentro de um array, um key seria o "path: 'caminho do componente'" e o outro o "componente: 'componente'"
+## Development server
 
-## Declaro links com ela com a diretiva [routerLink]="['caminho']" na tag "</a>"
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Posso passar um parâmetro para o array do routerLink [routerLink]="['caminho', 'parâmetro']"
+## Code scaffolding
 
-## Para receber no app.routes é path /login'/:id'
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Tem que injetar a classe active router para dar certo, "para pegar o id"
+## Build
 
-## Declaro as rotas e configs no arquivo "app.routes.ts" e pra usar importo o "RouterModule"
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## tag "</router-outlet>" para ser onde o componente do path deve ser exibido.
+## Running unit tests
 
-## Seguindo boas práticas sempre que usar o método "subscribe" declarar o "subscribe" também caso a classe seja destruída.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## 
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
