@@ -1,1 +1,9 @@
-<h1>Está renderizando o main apenas com a rota.</h1>
+<input
+  type="text"
+  placeholder="Digite o ID do Curso"
+  class="input-id"
+  #inputValue
+/>
+<button class="btn btn-success" (click)="sendId(inputValue.value)">
+  Send ID
+</button>

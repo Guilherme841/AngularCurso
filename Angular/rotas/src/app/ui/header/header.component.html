@@ -1,8 +1,8 @@
 <header>
-  <h1>LOGO</h1>
+  <h1 routerLink="['/home']">LOGO</h1>
   <nav>
-    <a>Login</a>
-    <a>Cursos</a>
-    <a>Cursos Com Id</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/cursos">Cursos</a>
+    <a [routerLink]="['/curso', id]">Cursos Com Id</a>
   </nav>
 </header>
