@@ -1,10 +1,24 @@
 import { Routes } from '@angular/router';
 
-import { LayoutComponent } from './ui/layout/layout.component';
+import { CursosComponent } from './components/cursos/cursos.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: HomeComponent,
+  },
+  {
+    path: 'cursos',
+    component: CursosComponent,
+  },
+  {
+    path: 'curso/:id',
+    component: CursosComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
