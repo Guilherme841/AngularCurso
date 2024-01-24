@@ -7,6 +7,7 @@ export class IdService {
   static sendId: EventEmitter<any> = new EventEmitter();
   constructor() {}
   id!: string | number;
+  cursos: Array<string> = ['Angular', 'Vue', 'Astro', 'Lua', 'Ruby'];
   getId(idReceived: string | number) {
     this.id = idReceived;
     IdService.sendId.emit(idReceived);
