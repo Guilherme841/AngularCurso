@@ -6,8 +6,9 @@ import { Injectable, EventEmitter } from '@angular/core';
 export class IdService {
   static sendId: EventEmitter<any> = new EventEmitter();
   constructor() {}
-  id!: unknown;
-  getId(idReceived: unknown) {
+  id!: string | number;
+  getId(idReceived: string | number) {
+    this.id = idReceived;
     IdService.sendId.emit(idReceived);
     return (this.id = idReceived);
   }

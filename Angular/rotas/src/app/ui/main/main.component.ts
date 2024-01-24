@@ -11,7 +11,7 @@ import { IdService } from '../../services/id.service';
 })
 export class MainComponent {
   constructor(private _id: IdService) {}
-  sendId(idReceived: unknown) {
+  sendId(idReceived: string | number) {
     this._id.getId(idReceived);
   }
 }

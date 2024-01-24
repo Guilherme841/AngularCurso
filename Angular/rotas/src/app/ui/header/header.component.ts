@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy {
   private eventSubscribe!: Subscription;
   constructor(private _id: IdService) {}
-  id!: unknown;
+  id!: string | number;
   ngOnInit() {
     this.eventSubscribe = IdService.sendId.subscribe((id) => {
       this.id = id;
