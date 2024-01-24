@@ -22,5 +22,12 @@ export class CursoDetalheComponent implements OnInit {
   ngOnInit() {
     // console.log(this._idService.cursos);
     this.cursos = this._idService.cursos;
+    this.cursos.filter((curso) => {
+      if (curso == this.id) {
+        return console.log('True!');
+      } else {
+        return console.log('False!');
+      }
+    });
   }
 }
