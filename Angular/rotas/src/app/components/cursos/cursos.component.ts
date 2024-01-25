@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-cursos',
   standalone: true,
   imports: [],
-  providers: [IdService, ActivatedRoute, Router],
+  providers: [IdService],
   templateUrl: './cursos.component.html',
   styleUrl: './cursos.component.scss',
 })
