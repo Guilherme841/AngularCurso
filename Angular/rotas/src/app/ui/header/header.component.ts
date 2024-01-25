@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private eventSubscribe!: Subscription;
   constructor(private _id: IdService) {}
   id!: string | number;
-  ngOnInit() {
+  ngOnInit() { 
     this.eventSubscribe = IdService.sendId.subscribe((id) => {
       this.id = id;
     });
