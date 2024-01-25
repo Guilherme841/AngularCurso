@@ -10,9 +10,7 @@ import { IdService } from '../../services/id.service';
 })
 export class CursosComponent implements OnInit {
   cursos!: Array<string>;
-  constructor(private _idService: IdService) {
-    console.log(this._idService.cursos);
-  }
+  constructor(private _idService: IdService) {}
   ngOnInit(): void {
     this.cursos = this._idService.cursos;
   }

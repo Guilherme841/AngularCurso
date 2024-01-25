@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IdService } from '../../services/id.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-curso-detalhe',
@@ -15,12 +15,16 @@ export class CursoDetalheComponent implements OnInit {
   cursos!: Array<string>;
   constructor(
     private _activeRoute: ActivatedRoute,
-    private _idService: IdService
-  ) {
-    this.id = this._activeRoute.snapshot.params['id'];
-  }
+    private _idService: IdService,
+    private _router: Router
+  ) {}
   ngOnInit() {
+    this.id = this._activeRoute.snapshot.params['id'];
     this.cursos = this._idService.cursos;
     this.cursos = this.cursos.filter((curso) => curso == this.id);
+    console.log(this.cursos);
+    if (this.cursos.length === 0) {
+      this._router.navigate(['']);
+    }
   }
 }
