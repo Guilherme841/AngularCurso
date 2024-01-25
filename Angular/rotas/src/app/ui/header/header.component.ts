@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { IdService } from '../../services/id.service';
 import { Subscription } from 'rxjs';
 
@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-header',
   standalone: true,
   imports: [RouterModule],
+  providers: [IdService],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
