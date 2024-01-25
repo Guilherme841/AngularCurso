@@ -22,7 +22,6 @@ export class CursoDetalheComponent implements OnInit {
     this.id = this._activeRoute.snapshot.params['id'];
     this.cursos = this._idService.cursos;
     this.cursos = this.cursos.filter((curso) => curso == this.id);
-    console.log(this.cursos);
     if (this.cursos.length === 0) {
       this._router.navigate(['']);
     }

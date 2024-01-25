@@ -10,21 +10,23 @@ export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'cursos',
-    component: CursosComponent,
-  },
-  {
-    path: 'curso/:id',
-    component: CursoDetalheComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
+    children: [
+      {
+        path: 'cursos',
+        component: CursosComponent,
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+      {
+        path: 'curso/:id',
+        component: CursoDetalheComponent,
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+    ],
   },
 ];

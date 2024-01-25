@@ -15,3 +15,10 @@
 ## tag "</router-outlet>" para ser onde o componente do path deve ser exibido.
 
 ## Seguindo boas práticas sempre que usar o método "subscribe" declarar o "subscribe" também caso a classe seja destruída.
+
+## para pegar a rota uso this.\_activatedRoute.params.subscribe((rota) => {});
+
+## para pegar o parâmetro de consulta/opcional é this.\_activatedRoute.queryParams.subscribe(() => {})
+
+## para direcionar para uma rota usando typescript é this.\_router.navigate(['/home']) - posso passar variáveis e query aqui |
+## this.\_router.navigate(['/cursos'] {queryParams: { pagina: ++this.pagina },}); 
