@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AlunosService } from '../../services/alunos.service';
@@ -10,15 +10,16 @@ import { AlunosService } from '../../services/alunos.service';
   templateUrl: './aluno-detalhe.component.html',
   styleUrl: './aluno-detalhe.component.scss',
 })
-export class AlunoDetalheComponent implements OnInit {
+export class AlunoDetalheComponent implements OnInit, OnDestroy {
   subscribe!: Subscription;
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _alunosService: AlunosService
   ) {}
   ngOnInit(): void {
-    this.subscribe = this._activatedRoute.params.subscribe(() => {
-
-    });
+    this.subscribe = this._activatedRoute.params.subscribe(() => {});
+  }
+  ngOnDestroy(): void {
+    this.subscribe.unsubscribe();
   }
 }
