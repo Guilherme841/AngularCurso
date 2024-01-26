@@ -5,6 +5,9 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { CursoDetalheComponent } from './components/curso-detalhe/curso-detalhe.component';
 import { LayoutComponent } from './ui/layout/layout.component';
+import { AlunosComponent } from './components/alunos/alunos.component';
+import { AlunoFormComponent } from './components/aluno-form/aluno-form.component';
+import { AlunoDetalheComponent } from './components/aluno-detalhe/aluno-detalhe.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +29,18 @@ export const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+      },
+      {
+        path: 'alunos',
+        component: AlunosComponent,
+      },
+      {
+        path: 'aluno/form',
+        component: AlunoFormComponent,
+      },
+      {
+        path: 'aluno/detalhe',
+        component: AlunoDetalheComponent,
       },
     ],
   },
