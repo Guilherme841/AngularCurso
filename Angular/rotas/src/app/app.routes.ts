@@ -23,24 +23,26 @@ export const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'curso/:id',
-        component: CursoDetalheComponent,
-      },
-      {
         path: 'login',
         component: LoginComponent,
       },
       {
         path: 'alunos',
         component: AlunosComponent,
+        children: [
+          {
+            path: 'alunos/:id',
+            component: AlunoDetalheComponent,
+          },
+        ],
       },
       {
         path: 'aluno/form',
         component: AlunoFormComponent,
       },
       {
-        path: 'aluno/detalhe',
-        component: AlunoDetalheComponent,
+        path: 'curso/:id',
+        component: CursoDetalheComponent,
       },
     ],
   },

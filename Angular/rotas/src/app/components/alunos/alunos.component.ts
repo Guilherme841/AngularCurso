@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunosService } from '../../services/alunos.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-alunos',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   providers: [AlunosService],
   templateUrl: './alunos.component.html',
   styleUrl: './alunos.component.scss',

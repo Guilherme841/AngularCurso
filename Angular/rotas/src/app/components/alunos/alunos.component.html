@@ -1,6 +1,10 @@
 <h5>Lista de ALunos</h5>
 <ul>
   @for (aluno of nomeAlunos; track $index) {
-  <li>{{ aluno }}</li>
+  <li>
+    <a [routerLink]="['alunos', 'teste']">{{ aluno }}</a>
+  </li>
   }
 </ul>
+
+<router-outlet></router-outlet>
