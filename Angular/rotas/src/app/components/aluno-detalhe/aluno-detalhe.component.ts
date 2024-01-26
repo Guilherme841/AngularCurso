@@ -12,12 +12,15 @@ import { AlunosService } from '../../services/alunos.service';
 })
 export class AlunoDetalheComponent implements OnInit, OnDestroy {
   subscribe!: Subscription;
+  idAluno: string = '';
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _alunosService: AlunosService
   ) {}
   ngOnInit(): void {
-    this.subscribe = this._activatedRoute.params.subscribe(() => {});
+    this.subscribe = this._activatedRoute.params.subscribe((id) => {
+      this.idAluno = id['id'];
+    });
   }
   ngOnDestroy(): void {
     this.subscribe.unsubscribe();
