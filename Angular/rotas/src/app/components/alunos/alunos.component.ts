@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlunosService } from '../../services/alunos.service';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-alunos',
@@ -12,6 +12,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AlunosComponent implements OnInit {
   protected alunos!: Array<object>;
+  objeto = { data: 12, dia: 10 };
   nomeAlunos: Array<string> = [];
   constructor(private _alunosService: AlunosService) {}
   ngOnInit() {
