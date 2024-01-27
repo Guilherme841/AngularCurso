@@ -2,9 +2,9 @@
 <ul>
   @for (aluno of nomeAlunos; track $index) {
   <li>
-    <a [routerLink]="['alunos', objeto]">{{ aluno }}</a>
+    <a [routerLink]="'aluno01'"> {{ aluno }}</a>
   </li>
   }
+  
 </ul>
-
 <router-outlet></router-outlet>

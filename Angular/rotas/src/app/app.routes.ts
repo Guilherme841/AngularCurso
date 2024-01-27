@@ -31,7 +31,7 @@ export const routes: Routes = [
         component: AlunosComponent,
         children: [
           {
-            path: 'alunos/:id',
+            path: ':id',
             component: AlunoDetalheComponent,
           },
         ],
