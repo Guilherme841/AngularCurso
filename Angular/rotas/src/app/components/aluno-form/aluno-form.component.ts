@@ -15,14 +15,15 @@ export class AlunoFormComponent implements OnInit {
     private _alunoService: AlunosService,
     private _activatedRoute: ActivatedRoute
   ) {}
-  nomeAluno!: string | number;
+  nomeAluno!: any;
+  objetoAluno!: any;
   ngOnInit() {
-    this._activatedRoute.params.subscribe((params) => {
+    this._activatedRoute.parent?.params.subscribe((params) => {
       this.nomeAluno = params['id'];
     });
     this._alunoService.getAlunos().forEach((aluno: any) => {
       if (aluno.nome === this.nomeAluno) {
-        return console.log(aluno);
+        return (this.objetoAluno = aluno);
       }
     });
   }
