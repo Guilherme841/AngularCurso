@@ -1,5 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import {
+  ActivatedRoute,
+  Router,
+  RouterLink,
+  RouterOutlet,
+} from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AlunosService } from '../../services/alunos.service';
 
@@ -16,7 +21,8 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
   objetoAluno: any;
   constructor(
     private _activatedRoute: ActivatedRoute,
-    private _alunosService: AlunosService
+    private _alunosService: AlunosService,
+    private _router: Router
   ) {}
   ngOnInit(): void {
     this.subscribe = this._activatedRoute.params.subscribe((id) => {
@@ -27,6 +33,9 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
         }
       });
     });
+  }
+  editarAluno() {
+    this._router.navigate(['alunos', this.idAluno, 'form']);
   }
   ngOnDestroy(): void {
     this.subscribe.unsubscribe();

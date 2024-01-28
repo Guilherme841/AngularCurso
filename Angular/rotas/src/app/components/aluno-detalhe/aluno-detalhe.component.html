@@ -2,7 +2,7 @@
 <p>Aluno: {{ objetoAluno.aluno }}</p>
 <p>Nome: {{ objetoAluno.nome }}</p>
 <p>Email: {{ objetoAluno.email }}</p>
-<a routerLink="form">Editar</a>
-<!-- <button class="btn btn-warning">Editar</button> -->
+<!-- <a routerLink="form">Editar</a> -->
+<button class="btn btn-warning" (click)="editarAluno()">Editar</button>
 <br>
 <router-outlet></router-outlet>
