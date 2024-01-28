@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AlunosService } from '../../services/alunos.service';
 
 @Component({
   selector: 'app-aluno-detalhe',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './aluno-detalhe.component.html',
   styleUrl: './aluno-detalhe.component.scss',
 })

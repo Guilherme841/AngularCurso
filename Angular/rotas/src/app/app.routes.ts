@@ -33,12 +33,14 @@ export const routes: Routes = [
           {
             path: ':id',
             component: AlunoDetalheComponent,
+            children: [
+              {
+                path: 'form',
+                component: AlunoFormComponent,
+              },
+            ],
           },
         ],
-      },
-      {
-        path: 'aluno/form',
-        component: AlunoFormComponent,
       },
       {
         path: 'curso/:id',
