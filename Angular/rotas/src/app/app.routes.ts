@@ -62,9 +62,9 @@ export const routes: Routes = [
       },
       {
         path: 'curso/:id',
-        loadComponent: () =>
-          import('./components/curso-detalhe/curso-detalhe.component').then(
-            (m) => m.CursoDetalheComponent
+        loadChildren: () =>
+          import('./components/curso-detalhe/curso-detalhe-route').then(
+            (m) => m.routes
           ),
       },
     ],
