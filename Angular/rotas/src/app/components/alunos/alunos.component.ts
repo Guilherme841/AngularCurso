@@ -20,7 +20,6 @@ export class AlunosComponent implements OnInit {
     this.alunos.find((pessoa: any) => {
       let { nome } = pessoa;
       this.nomeAlunos.push(nome);
-      console.log(this.nomeAlunos);
     });
   }
 }
