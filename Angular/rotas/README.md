@@ -21,4 +21,7 @@
 ## para pegar o parâmetro de consulta/opcional é this.\_activatedRoute.queryParams.subscribe(() => {})
 
 ## para direcionar para uma rota usando typescript é this.\_router.navigate(['/home']) - posso passar variáveis e query aqui |
-## this.\_router.navigate(['/cursos'] {queryParams: { pagina: ++this.pagina },}); 
+
+## this.\_router.navigate(['/cursos'] {queryParams: { pagina: ++this.pagina },});
+
+## Posso passar children nas rotas do app.routes.ts para a rota ser filha da rota e ser renderizada no seu componente pai.
