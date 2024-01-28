@@ -1,1 +1,27 @@
-<p>login works!</p>
+<h5>Faça seu login</h5>
+<div class="container">
+  <div class="input-group mb-3">
+    <span class="input-group-text usuario" id="inputGroup-sizing-default"
+      >Usuário</span
+    >
+    <input
+      type="text"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text password" id="inputGroup-sizing-default"
+      >Password</span
+    >
+    <input
+      type="password"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Logar</button>
+</div>

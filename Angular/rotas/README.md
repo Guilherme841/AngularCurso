@@ -26,4 +26,4 @@
 
 ## Posso passar children nas rotas do app.routes.ts para a rota ser filha da rota e ser renderizada no seu componente pai.
 
-## LazyLoading | Defer | 
+## LazyLoading | Defer | LoadComponent: () => import('components/meu-component').then((m) => m.meu-componente)
