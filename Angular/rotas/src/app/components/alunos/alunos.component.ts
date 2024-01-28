@@ -23,7 +23,4 @@ export class AlunosComponent implements OnInit {
       console.log(this.nomeAlunos);
     });
   }
-  linkAluno(aluno: string) {
-    return `alunos/${aluno}`
-  }
 }
