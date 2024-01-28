@@ -16,27 +16,45 @@ export const routes: Routes = [
     children: [
       {
         path: 'cursos',
-        component: CursosComponent,
+        loadComponent: () =>
+          import('./components/cursos/cursos.component').then(
+            (m) => m.CursosComponent
+          ),
       },
       {
         path: 'home',
-        component: HomeComponent,
+        loadComponent: () =>
+          import('./components/home/home.component').then(
+            (m) => m.HomeComponent
+          ),
       },
       {
         path: 'login',
-        component: LoginComponent,
+        loadComponent: () =>
+          import('./components/login/login.component').then(
+            (m) => m.LoginComponent
+          ),
       },
       {
         path: 'alunos',
-        component: AlunosComponent,
+        loadComponent: () =>
+          import('./components/alunos/alunos.component').then(
+            (m) => m.AlunosComponent
+          ),
         children: [
           {
             path: ':id',
-            component: AlunoDetalheComponent,
+            loadComponent: () =>
+              import('./components/aluno-detalhe/aluno-detalhe.component').then(
+                (m) => m.AlunoDetalheComponent
+              ),
             children: [
               {
                 path: 'form',
-                component: AlunoFormComponent,
+                loadComponent: () =>
+                  import('./components/aluno-form/aluno-form.component').then(
+                    (m) => m.AlunoFormComponent
+                  ),
               },
             ],
           },
@@ -44,7 +62,10 @@ export const routes: Routes = [
       },
       {
         path: 'curso/:id',
-        component: CursoDetalheComponent,
+        loadComponent: () =>
+          import('./components/curso-detalhe/curso-detalhe.component').then(
+            (m) => m.CursoDetalheComponent
+          ),
       },
     ],
   },
