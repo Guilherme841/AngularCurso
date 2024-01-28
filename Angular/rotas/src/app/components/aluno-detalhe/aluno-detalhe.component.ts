@@ -13,6 +13,7 @@ import { AlunosService } from '../../services/alunos.service';
 export class AlunoDetalheComponent implements OnInit, OnDestroy {
   subscribe!: Subscription;
   idAluno: string = '';
+  objetoAluno: any;
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _alunosService: AlunosService
@@ -20,10 +21,10 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscribe = this._activatedRoute.params.subscribe((id) => {
       this.idAluno = id['id'];
+
       this._alunosService.getAlunos().forEach((objeto: any) => {
         if (objeto.nome === this.idAluno) {
-          console.log(objeto);
-          return objeto;
+          return (this.objetoAluno = objeto);
         }
       });
     });
