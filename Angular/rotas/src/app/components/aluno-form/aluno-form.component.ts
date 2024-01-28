@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-aluno-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './aluno-form.component.html',
-  styleUrl: './aluno-form.component.scss'
+  styleUrl: './aluno-form.component.scss',
 })
 export class AlunoFormComponent {
-
+  onSubmit() {}
 }
