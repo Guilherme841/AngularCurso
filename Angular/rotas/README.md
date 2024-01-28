@@ -25,3 +25,5 @@
 ## this.\_router.navigate(['/cursos'] {queryParams: { pagina: ++this.pagina },});
 
 ## Posso passar children nas rotas do app.routes.ts para a rota ser filha da rota e ser renderizada no seu componente pai.
+
+## LazyLoading | Defer | 

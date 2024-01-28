@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { AlunosService } from '../../services/alunos.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-aluno-form',
