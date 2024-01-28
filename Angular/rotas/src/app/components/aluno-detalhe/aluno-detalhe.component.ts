@@ -20,6 +20,12 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscribe = this._activatedRoute.params.subscribe((id) => {
       this.idAluno = id['id'];
+      this._alunosService.getAlunos().forEach((objeto: any) => {
+        if (objeto.nome === this.idAluno) {
+          console.log(objeto);
+          return objeto;
+        }
+      });
     });
   }
   ngOnDestroy(): void {
