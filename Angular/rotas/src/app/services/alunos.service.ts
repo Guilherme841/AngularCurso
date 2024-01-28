@@ -6,17 +6,17 @@ import { Injectable } from '@angular/core';
 export class AlunosService {
   private alunos: Array<object> = [
     {
-      id: 1,
+      aluno: 'Aluno01',
       nome: 'Fulano',
       email: 'aluno@yahoo.com',
     },
     {
-      id: 2,
+      aluno: 'Aluno02',
       nome: 'Ciclano',
       email: 'aluno@yahoo.com',
     },
     {
-      id: 3,
+      aluno: 'Aluno03',
       nome: 'Beltrano',
       email: 'aluno@yahoo.com',
     },
