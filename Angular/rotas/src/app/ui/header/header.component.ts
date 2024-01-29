@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { IdService } from '../../services/id.service';
 import { Subscription } from 'rxjs';
+import { IdService } from '../../services/id.service';
 import { LoginAuthService } from '../../services/login-auth.service';
 
 @Component({
@@ -14,6 +14,7 @@ import { LoginAuthService } from '../../services/login-auth.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   private eventSubscribe!: Subscription;
+  private eventSubscribe2!: Subscription;
   pagina!: number;
   showNav: boolean = false;
   constructor(
@@ -26,11 +27,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.eventSubscribe = IdService.sendId.subscribe((id) => {
       this.id = id;
     });
-    LoginAuthService.mostrarMenu.subscribe((mostrar) => {
+    this.eventSubscribe2 = LoginAuthService.mostrarMenu.subscribe((mostrar) => {
       this.showNav = mostrar;
     });
   }
   ngOnDestroy() {
+    this.eventSubscribe2.unsubscribe();
     this.eventSubscribe.unsubscribe();
   }
 }
