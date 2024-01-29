@@ -1,3 +1,4 @@
+@if (showNav) {
 <header>
   <h1 routerLink="['/home']">LOGO</h1>
   <nav>
@@ -5,5 +6,6 @@
     <a routerLink="/cursos" [queryParams]="{ pagina: 1 }">Cursos</a>
     <a [routerLink]="['/curso', id]">Cursos Com Id</a>
     <a routerLink="alunos">Alunos</a>
-  </nav>
+  </nav> 
 </header>
+}

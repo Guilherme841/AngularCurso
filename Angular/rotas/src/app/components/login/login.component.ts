@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   };
   fazerLogin() {
     this._authService.fazerLogin(this.user);
-    // console.log(JSON.stringify(this.user));
   }
   ngOnInit() {}
 }
