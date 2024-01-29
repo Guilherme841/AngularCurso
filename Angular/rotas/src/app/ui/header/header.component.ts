@@ -13,8 +13,8 @@ import { LoginAuthService } from '../../services/login-auth.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private eventSubscribe!: Subscription;
-  private eventSubscribe2!: Subscription;
+  private eventSubscribe: Subscription = new Subscription();
+  private eventSubscribe2: Subscription = new Subscription();
   pagina!: number;
   showNav: boolean = false;
   constructor(
