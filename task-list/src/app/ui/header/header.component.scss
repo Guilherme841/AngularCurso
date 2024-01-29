@@ -1,0 +1,25 @@
+$bg-color-header: rgb(0, 46, 53);
+
+header {
+  background-color: $bg-color-header;
+  padding: 18px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    h1 {
+      color: lightgray;
+      text-align: center;
+    }
+    .container-icon-menu {
+      display: grid;
+      gap: 3px;
+      .row-menu {
+        width: 15px;
+        height: 2px;
+        background-color: white;
+      }
+    }
+  }
+}
