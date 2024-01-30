@@ -14,10 +14,10 @@ header nav h1 {
 }
 header nav .container-icon-menu {
   display: grid;
-  gap: 3px;
+  gap: 5px;
 }
 header nav .container-icon-menu .row-menu {
-  width: 15px;
-  height: 2px;
+  width: 20px;
+  height: 3px;
   background-color: white;
 }/*# sourceMappingURL=header.component.css.map */

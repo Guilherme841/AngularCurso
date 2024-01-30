@@ -14,10 +14,11 @@ header {
     }
     .container-icon-menu {
       display: grid;
-      gap: 3px;
+      gap: 5px;
+
       .row-menu {
-        width: 15px;
-        height: 2px;
+        width: 20px;
+        height: 3px;
         background-color: white;
       }
     }
